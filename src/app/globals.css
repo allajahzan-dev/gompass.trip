@@ -116,7 +116,28 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+* {
+  outline: none;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  scrollbar-width: auto;
+  scroll-behavior: smooth !important;
 }

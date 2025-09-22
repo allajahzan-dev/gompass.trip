@@ -10,7 +10,7 @@ export default function Navbar() {
             className="absolute z-10 top-0 left-0 w-full py-8 px-5 text-white flex items-center justify-between
             md:px-10 xl:px-24"
         >
-            <div className="flex items-center gap-2">
+            <Link href={"/"} className="flex items-center gap-2">
                 <Image
                     width={1000}
                     height={1000}
@@ -23,7 +23,7 @@ export default function Navbar() {
                 <p className={cn(playfair.className, "text-xl font-medium italic")}>
                     Gompass.trip
                 </p>
-            </div>
+            </Link>
 
             <div className="flex items-center gap-20">
                 <Link className="hover:underline" href={"/trips"}>Trips</Link>

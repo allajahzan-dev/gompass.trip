@@ -20,9 +20,8 @@ export default function AnimatePackages({ pkg }: Props) {
         >
             {/* Image */}
             <Image
-                width={1000}
-                height={1000}
-                quality={100}
+                width={200}
+                height={200}
                 src={pkg.image}
                 alt={pkg.Title}
                 className="h-full w-full object-cover object-center scale-105"

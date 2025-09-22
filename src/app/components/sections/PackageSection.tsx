@@ -1,8 +1,7 @@
-import { playfair } from "@/app/fonts/playfair";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { fetchPackages } from "@/app/utils/fetchPackages";
 import AnimatePackages from "../animations/AnimatePackages";
+import RevealPackageTitle from "../animations/RevealPackageTitle";
 
 // Package section
 export default async function PackageSection() {
@@ -20,15 +19,7 @@ export default async function PackageSection() {
                  lg:grid-cols-3 lg:gap-0"
             >
                 {/* Title */}
-                <p
-                    className="col-span-1 text-4xl font-normal
-                    lg:col-span-2 md:text-5xl xl:text-6xl"
-                >
-                    Must{" "}
-                    <i className={cn(playfair.className, "text-[#f15b34]")}>experience</i>
-                    <br />
-                    packages
-                </p>
+                <RevealPackageTitle />
 
                 {/* Description */}
                 <div className="flex flex-col gap-5 items-start">
