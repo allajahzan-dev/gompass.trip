@@ -1,0 +1,40 @@
+{
+    "packages": [
+        {
+            "id": 1,
+            "Title": "Tropical Paradise Recreation",
+            "location": "Bali, Indonesia",
+            "days": "7 days, 6 nights",
+            "image": "/images/packages/package-1.jpg",
+            "description": "",
+            "price": "₹25,000"
+        },
+        {
+            "id": 2,
+            "Title": "Cruise Getaway Expedition",
+            "location": "Caribbean Islands",
+            "days": "7 days, 6 nights",
+            "image": "/images/packages/package-2.jpg",
+            "description": "",
+            "price": "₹20,000"
+        },
+        {
+            "id": 3,
+            "Title": "Cultural Immersion in Morocco",
+            "location": "Cusco, Peru",
+            "days": "6 Days, 5 Nights",
+            "image": "/images/packages/package-3.jpg",
+            "description": "",
+            "price": "₹25,000"
+        },
+        {
+            "id": 4,
+            "Title": "River Expedition in Thuringia",
+            "location": "Thuringia, Germany",
+            "days": "7 days, 6 nights",
+            "image": "/images/packages/package-4.jpg",
+            "description": "",
+            "price": "₹25,000"
+        }
+    ]
+}

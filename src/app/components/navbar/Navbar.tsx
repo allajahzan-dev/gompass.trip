@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Navbar() {
     return (
         <nav
-            className="absolute z-10 top-0 left-0 w-full py-5 px-5 text-white flex items-center justify-between
+            className="absolute z-10 top-0 left-0 w-full py-8 px-5 text-white flex items-center justify-between
             md:px-10 xl:px-24"
         >
             <div className="flex items-center gap-2">
@@ -17,19 +17,19 @@ export default function Navbar() {
                     quality={100}
                     src={"/images/home/hero/logo.jpg"}
                     alt="logo"
-                    className="w-10 rounded-full shadow-md border-2 border-white"
+                    className="w-8 rounded-full shadow-md border-2 border-white"
                 />
 
-                <p className={cn(playfair.className, "text-2xl font-medium italic")}>
+                <p className={cn(playfair.className, "text-xl font-medium italic")}>
                     Gompass.trip
                 </p>
             </div>
 
             <div className="flex items-center gap-20">
-                <Link href={"/Trips"}>Trips</Link>
-                <Link href={"/Gallery"}>Gallery</Link>
-                <Link href={"/About"}>About</Link>
-                <Link href={"/Contact"}>Contact</Link>
+                <Link className="hover:underline" href={"/trips"}>Trips</Link>
+                <Link className="hover:underline" href={"/gallery"}>Gallery</Link>
+                <Link className="hover:underline" href={"/about"}>About</Link>
+                <Link className="hover:underline" href={"/contact"}>Contact</Link>
             </div>
         </nav>
     );
