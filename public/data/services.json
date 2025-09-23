@@ -1,0 +1,28 @@
+{
+    "services": [
+        {
+            "id": 1,
+            "title": "Customer-Centric",
+            "description": "Being customer-centric is the compass that guides our travel services. We prioritize our customers' needs.",
+            "icon": "User"
+        },
+        {
+            "id": 2,
+            "title": "Sustainable Travel",
+            "description": "Committed to responsible and eco-conscious journeys, traveling the world with minimal footprints and pollutions.",
+            "icon": "Leaf"
+        },
+        {
+            "id": 3,
+            "title": "Authentic Experiences",
+            "description": "We deliver journeys that immerse you in unforgettable encounter with the world's diverse cultures & landscapes.",
+            "icon": "Plane"
+        },
+        {
+            "id": 4,
+            "title": "Quality Guides",
+            "description": "Every journey will be led by knowledgeable, passionate experts who enhance your travel experience.",
+            "icon": "Star"
+        }
+    ]
+}

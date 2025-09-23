@@ -16,7 +16,7 @@ export const fetchPackages = async (): Promise<{
     packages: IPackages[];
 }> => {
     try {
-        const resp = await fetch(`${BASE_URL}/data/packages/packages.json`);
+        const resp = await fetch(`${BASE_URL}/data/packages.json`);
         const data = await resp.json();
         return data;
     } catch (err) {

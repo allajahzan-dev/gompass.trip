@@ -1,6 +1,5 @@
 "use client";
 
-import { playfair } from "@/app/fonts/playfair";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,6 +21,23 @@ export default function Navbar() {
         }
     }, [toggle]);
 
+    // Close navitems on resize
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setToggle(false);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <nav
             className="absolute z-10 top-0 left-0 w-full py-8 px-5 text-white flex items-center justify-between
@@ -37,8 +53,8 @@ export default function Navbar() {
                     className="w-8 rounded-full shadow-md border-2 border-white"
                 />
 
-                <p className={cn(playfair.className, "text-xl font-medium italic")}>
-                    Gompass.trip
+                <p className={cn("text-xl font-semibold")}>
+                    <span className="text-[#f15b34]">Go</span>mpass.trip
                 </p>
             </Link>
 
@@ -47,76 +63,85 @@ export default function Navbar() {
                 className="hidden items-center gap-20
                 lg:flex"
             >
-                <Link className="hover:underline" href={"/trips"}>
+                <Link className="hover:underline underline-offset-8" href={"/trips"}>
                     Trips
                 </Link>
-                <Link className="hover:underline" href={"/gallery"}>
+                <Link className="hover:underline underline-offset-8" href={"/gallery"}>
                     Gallery
                 </Link>
-                <Link className="hover:underline" href={"/about"}>
+                <Link className="hover:underline underline-offset-8" href={"/about"}>
                     About
                 </Link>
-                <Link className="hover:underline" href={"/contact"}>
+                <Link className="hover:underline underline-offset-8" href={"/contact"}>
                     Contact
                 </Link>
             </div>
 
-            {/* Hamburger */}
+            {/* Nav items on mobile */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="relative z-50 block cursor-pointer
-                        lg:hidden"
+                className="block cursor-pointer
+                lg:hidden"
             >
+                {/* Hamburger */}
                 <Hamburger action={() => setToggle(!toggle)} toggle={toggle} />
-            </motion.div>
 
-            {/* Nav items on mobile */}
-            <div
-                className={cn(
-                    "fixed z-40 h-full w-full top-0 left-0 bg-black/60",
-                    "flex items-center justify-end",
-                    toggle ? "-translate-x-0" : "translate-x-full"
-                )}
-            >
+                {/* Nav items */}
                 <div
                     className={cn(
-                        "w-[300px] h-full pt-28 px-10 bg-[#141414] flex flex-col justify-start items-end gap-10",
-                        "transition-transform duration-300 ease-in-out",
-                        toggle ? "translate-x-0" : "translate-x-100",
-                        "sm:w-[400px] md:w-[500px]"
+                        "fixed z-40 h-full w-full top-0 left-0 bg-black/60",
+                        "flex items-center justify-end",
+                        toggle ? "-translate-x-0" : "translate-x-full"
                     )}
                 >
-                    <Link
-                        className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                        href={"/"}
+                    <div
+                        className={cn(
+                            "w-[300px] h-full pt-28 px-10 bg-[#141414] flex flex-col justify-start items-end gap-10",
+                            "transition-transform duration-300 ease-in-out",
+                            toggle ? "translate-x-0" : "translate-x-100",
+                            "sm:w-[400px] md:w-[500px]"
+                        )}
                     >
-                        Home
-                    </Link>
-                    <Link
-                        className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                        href={"/trips"}
-                    >
-                        Trips
-                    </Link>
-                    <Link
-                        className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                        href={"/gallery"}
-                    >
-                        Gallery
-                    </Link>
-                    <Link
-                        className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                        href={"/about"}
-                    >
-                        About
-                    </Link>
-                    <Link className="w-full py-1 text-end" href={"/contact"}>
-                        Contact
-                    </Link>
+                        <Link
+                            onNavigate={() => setToggle(false)}
+                            className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
+                            href={"/"}
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            onNavigate={() => setToggle(false)}
+                            className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
+                            href={"/trips"}
+                        >
+                            Trips
+                        </Link>
+                        <Link
+                            onNavigate={() => setToggle(false)}
+                            className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
+                            href={"/gallery"}
+                        >
+                            Gallery
+                        </Link>
+                        <Link
+                            onNavigate={() => setToggle(false)}
+                            className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
+                            href={"/about"}
+                        >
+                            About
+                        </Link>
+                        <Link
+                            onNavigate={() => setToggle(false)}
+                            className="w-full py-1 text-end"
+                            href={"/contact"}
+                        >
+                            Contact
+                        </Link>
+                    </div>
                 </div>
-            </div>
+            </motion.div>
         </nav>
     );
 }

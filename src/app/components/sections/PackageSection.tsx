@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { fetchPackages } from "@/app/utils/fetchPackages";
 import AnimatePackages from "../animations/AnimatePackages";
-import RevealPackageTitle from "../animations/RevealPackageTitle";
+import RevealSectionTitle from "../animations/RevealSectionTitle";
+import { cn } from "@/lib/utils";
+import { playfair } from "@/app/fonts/playfair";
 
 // Package section
 export default async function PackageSection() {
@@ -10,16 +12,27 @@ export default async function PackageSection() {
 
     return (
         <section
-            className="min-h-screen px-5 py-20 bg-white flex flex-col gap-12
+            className="min-h-screen px-5 py-24 bg-white flex flex-col gap-12
             md:px-10 xl:px-24"
         >
             {/* Heading */}
             <div
                 className="grid grid-cols-1 gap-10
-                 lg:grid-cols-3 lg:gap-0"
+                lg:grid-cols-3 lg:gap-0"
             >
                 {/* Title */}
-                <RevealPackageTitle />
+                <RevealSectionTitle
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ amount: 0.5, once: false }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="col-span-1 lg:col-span-2"
+                >
+                    Must{" "}
+                    <i className={cn(playfair.className, "text-[#f15b34]")}>experience</i>
+                    <br />
+                    packages
+                </RevealSectionTitle>
 
                 {/* Description */}
                 <div className="flex flex-col gap-5 items-start">

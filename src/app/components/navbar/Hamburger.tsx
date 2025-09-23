@@ -10,7 +10,7 @@ interface Props {
 export function Hamburger({ action, toggle }: Props) {
   return (
     <StyledWrapper>
-      <label className="hamburger">
+      <label className="hamburger relative z-50">
         <input
           onChange={() => action()}
           name="checkbox"
