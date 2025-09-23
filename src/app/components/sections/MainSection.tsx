@@ -1,5 +1,6 @@
 import HeroSection from "./HeroSection";
 import PackageSection from "./PackageSection";
+import ProcessSection from "./ProcessSection";
 import ServiceSection from "./ServiceSection";
 
 // Main section
@@ -8,7 +9,8 @@ export default function MainSection() {
         <main>
             <HeroSection />
             <PackageSection />
-            <ServiceSection/>
+            <ServiceSection />
+            <ProcessSection />
         </main>
     );
 }

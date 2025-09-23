@@ -14,13 +14,13 @@ export default async function ServiceSection() {
     const getIcon = (icon: string) => {
         switch (icon) {
             case "User":
-                return <User className="w-5 h-5 fill-black text-black" />;
+                return <User className="w-5 h-5 text-black" />;
             case "Leaf":
-                return <Leaf className="w-5 h-5 fill-white text-white" />;
+                return <Leaf className="w-5 h-5 text-white" />;
             case "Plane":
-                return <Plane className="w-5 h-5 fill-black text-black" />;
+                return <Plane className="w-5 h-5 text-black" />;
             case "Star":
-                return <Star className="w-5 h-5 fill-white text-white" />;
+                return <Star className="w-5 h-5 text-white" />;
             default:
                 return null;
         }
@@ -41,7 +41,7 @@ export default async function ServiceSection() {
                     <RevealSectionTitle
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ amount: 0.5, once: false }}
+                        viewport={{ amount: 0.5, once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="col-span-1"
                     >
