@@ -55,7 +55,7 @@ export default async function ServiceSection() {
 
                     {/* Description */}
                     <p className="text-xl text-zinc-600">
-                        Our beliefs aren't just words; they are the foundation of every
+                        Our beliefs aren&apos;t just words; they are the foundation of every
                         adventure we offer. With high commitment to sustainability,
                         authenticity, and customer-centricity, we ensure that every trip you
                         take with us is valuable.
