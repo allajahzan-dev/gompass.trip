@@ -27,12 +27,11 @@ export default async function ServiceSection() {
 
     return (
         <section
-            className="min-h-screen px-5 py-24 bg-[#f3f3f3] flex flex-col
+            className="min-h-screen px-5 py-24 bg-[#f3f3f3]
             md:px-10 xl:px-24"
         >
-            {/* Heading */}
             <div
-                className="grid grid-cols-1 gap-20
+                className="grid grid-cols-1 gap-16
                 lg:grid-cols-2 lg:gap-20"
             >
                 {/* Heading */}
@@ -69,8 +68,9 @@ export default async function ServiceSection() {
                         <div
                             key={srv.id}
                             className={cn(
-                                "w-full px-12 py-6 flex items-center border border-black rounded-3xl",
-                                srv.id % 2 === 0 && "bg-[#141414]"
+                                "w-full p-6 flex items-center border border-black rounded-3xl",
+                                srv.id % 2 === 0 && "bg-[#141414]",
+                                "xl:px-12"
                             )}
                         >
                             <div className="flex items-start gap-5">
