@@ -76,6 +76,7 @@ export default function ProcessSection() {
                             <motion.div
                                 initial={{ scale: 0.8, rotate: 12 }}
                                 whileInView={{ scale: 1, rotate: -12 }}
+                                viewport={{ amount: 0.5 }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
@@ -119,6 +120,7 @@ export default function ProcessSection() {
                             <motion.div
                                 initial={{ scale: 0.8, rotate: -12 }}
                                 whileInView={{ scale: 1, rotate: 12 }}
+                                viewport={{ amount: 0.5 }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
@@ -165,6 +167,7 @@ export default function ProcessSection() {
                             <motion.div
                                 initial={{ scale: 0.8, rotate: 12 }}
                                 whileInView={{ scale: 1, rotate: -12 }}
+                                viewport={{ amount: 0.5 }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
