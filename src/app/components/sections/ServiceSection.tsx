@@ -3,6 +3,7 @@ import RevealSectionTitle from "../animations/RevealSectionTitle";
 import { cn } from "@/lib/utils";
 import { fetchServices } from "@/app/utils/fetchServices";
 import { Leaf, Plane, Star, User } from "lucide-react";
+import AnimateServices from "../animations/AnimateServices";
 
 // Service section
 export default async function ServiceSection() {
@@ -65,50 +66,51 @@ export default async function ServiceSection() {
                 {/* Services */}
                 <div className="flex flex-col gap-5 items-start">
                     {services.map((srv) => (
-                        <div
-                            key={srv.id}
-                            className={cn(
-                                "w-full p-6 flex items-center border border-black rounded-3xl",
-                                srv.id % 2 === 0 && "bg-[#141414]",
-                                "xl:px-12"
-                            )}
-                        >
-                            <div className="flex items-start gap-5">
-                                {/* Icon */}
-                                <div
-                                    className={cn(
-                                        "p-4 border rounded-full",
-                                        srv.id % 2 === 0
-                                            ? "border-[#4f4f4f] bg-[#4f4f4f]"
-                                            : "border-black"
-                                    )}
-                                >
-                                    {getIcon(srv.icon)}
-                                </div>
-
-                                {/* Text */}
-                                <div className="flex flex-col gap-2">
-                                    {/* Title */}
-                                    <h1
+                        <AnimateServices key={srv.id} id={srv.id}>
+                            <div
+                                className={cn(
+                                    "w-full p-6 flex items-center border border-black rounded-3xl",
+                                    srv.id % 2 === 0 && "bg-[#141414]",
+                                    "xl:px-12"
+                                )}
+                            >
+                                <div className="flex items-start gap-5">
+                                    {/* Icon */}
+                                    <div
                                         className={cn(
-                                            "font-semibold",
-                                            srv.id % 2 === 0 ? "text-white" : "text-black"
+                                            "p-4 border rounded-full",
+                                            srv.id % 2 === 0
+                                                ? "border-[#4f4f4f] bg-[#4f4f4f]"
+                                                : "border-black"
                                         )}
                                     >
-                                        {srv.title}
-                                    </h1>
+                                        {getIcon(srv.icon)}
+                                    </div>
 
-                                    {/* Description */}
-                                    <p
-                                        className={cn(
-                                            srv.id % 2 === 0 ? "text-zinc-300" : "text-zinc-600"
-                                        )}
-                                    >
-                                        {srv.description}
-                                    </p>
+                                    {/* Text */}
+                                    <div className="flex flex-col gap-2">
+                                        {/* Title */}
+                                        <h1
+                                            className={cn(
+                                                "font-semibold",
+                                                srv.id % 2 === 0 ? "text-white" : "text-black"
+                                            )}
+                                        >
+                                            {srv.title}
+                                        </h1>
+
+                                        {/* Description */}
+                                        <p
+                                            className={cn(
+                                                srv.id % 2 === 0 ? "text-zinc-300" : "text-zinc-600"
+                                            )}
+                                        >
+                                            {srv.description}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </AnimateServices>
                     ))}
                 </div>
             </div>
