@@ -53,7 +53,7 @@ export default function Navbar() {
                     className="w-8 rounded-full shadow-md border-2 border-white"
                 />
 
-                <p className={cn("text-xl font-semibold")}>
+                <p className={cn("text-2xl font-semibold")}>
                     <span className="text-[#f15b34]">Go</span>mpass
                 </p>
             </Link>
