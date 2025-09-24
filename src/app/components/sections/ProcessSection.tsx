@@ -10,7 +10,7 @@ import { motion } from "motion/react";
 export default function ProcessSection() {
     return (
         <section
-            className="min-h-screen px-5 py-24 bg-white flex flex-col gap-20
+            className="min-h-screen px-5 py-24 bg-white flex flex-col gap-16
             md:px-10 xl:px-24 lg:gap-3"
         >
             {/* Heading */}

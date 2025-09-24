@@ -1,19 +1,24 @@
 import { playfair } from "@/app/fonts/playfair";
 import RevealSectionTitle from "../animations/RevealSectionTitle";
 import { cn } from "@/lib/utils";
-import { Quote } from "lucide-react";
 import Image from "next/image";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
 } from "@/components/ui/carousel";
+import { fetchStories } from "@/app/utils/fetchStories";
 
 // Stories section
-export default function StoriesSection() {
+export default async function StoriesSection() {
+    // Stories
+    const { stories } = await fetchStories();
+
     return (
         <section
-            className="min-h-screen px-5 py-24 bg-white flex flex-col gap-12
+            className="h-auto px-5 py-24 bg-white flex flex-col gap-16
             md:px-10 xl:px-24"
         >
             {/* Heading */}
@@ -47,30 +52,35 @@ export default function StoriesSection() {
                 </div>
             </div>
 
-            <Carousel className="relative">
+            {/* Stories */}
+            <Carousel className="w-full">
                 <CarouselContent className="gap-5">
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3 p-8 flex flex-col gap-5 border border-black rounded-3xl">
-                        <p>My travel dreams finally came true, thanks to them. I explored places I never thought I would see, and everything was seamless from start to finish during the trip.</p>
-                        <div className="flex items-center">
-                            <div>
-                                <Image
-                                    width={64}
-                                    height={64}
-                                    src="/images/avatar.png"
-                                    alt="avatar"
-                                    className="w-16 h-16 rounded-full"
-                                />
+                    {stories.map((str) => (
+                        <CarouselItem
+                            key={str.id}
+                            className="md:basis-1/2 lg:basis-1/3 p-8 flex flex-col gap-6 justify-between border border-black rounded-3xl"
+                        >
+                            <p className="text-xl text-zinc-600">{str.description}</p>
+                            <div className="flex items-center gap-5">
+                                <div>
+                                    <Image
+                                        width={64}
+                                        height={64}
+                                        src={str.image}
+                                        alt="avatar"
+                                        className="w-12 h-12 rounded-full"
+                                    />
+                                </div>
+                                <div className="text-base">
+                                    <h3 className="font-bold">{str.name}</h3>
+                                    <p>{str.location}</p>
+                                </div>
                             </div>
-                            <div className="">
-                                <h3>Ahsan allaj pk</h3>
-                                <p>Laskadweep</p>
-                            </div>
-                        </div>
-                    </CarouselItem>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3"></CarouselItem>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3"></CarouselItem>
-                    <CarouselItem className="md:basis-1/2 lg:basis-1/3"></CarouselItem>
+                        </CarouselItem>
+                    ))}
                 </CarouselContent>
+                <CarouselNext />
+                <CarouselPrevious />
             </Carousel>
         </section>
     );
