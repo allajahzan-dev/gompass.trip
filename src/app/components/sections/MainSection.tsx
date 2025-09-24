@@ -1,6 +1,6 @@
 import HeroSection from "./HeroSection";
 import PackageSection from "./PackageSection";
-import ServiceSection from "./ServiceSection";
+import ServiceSection from "../../../components/common/ServiceSection";
 import ProcessSection from "./ProcessSection";
 import StoriesSection from "./StoriesSection";
 import ContactSection from "@/components/common/ContactSection";
