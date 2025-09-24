@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     description: "Travel Agency",
 };
 
+// Root layout
 export default function RootLayout({
     children,
 }: Readonly<{
