@@ -28,7 +28,7 @@ export default async function ServiceSection() {
 
     return (
         <section
-            className="min-h-screen px-5 py-10 bg-[#f3f3f3]
+            className="min-h-screen px-5 py-16 bg-[#f3f3f3]
             md:px-10 xl:px-24 md:py-24"
         >
             <div

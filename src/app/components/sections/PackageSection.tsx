@@ -12,7 +12,7 @@ export default async function PackageSection() {
 
     return (
         <section
-            className="min-h-screen px-5 py-10 bg-white flex flex-col gap-16
+            className="min-h-screen px-5 py-16 bg-white flex flex-col gap-16
             md:px-10 xl:px-24 md:py-24"
         >
             {/* Heading */}
