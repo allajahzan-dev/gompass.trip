@@ -69,7 +69,7 @@ export default function ProcessSection() {
                     >
                         {/* Image */}
                         <div
-                            className="relative left-0 z-10 h-56 w-56 bg-[#f3f3f3] flex items-center justify-center rounded-full
+                            className="relative left-0 h-56 w-56 bg-[#f3f3f3] flex items-center justify-center rounded-full
                             md:left-5"
                         >
                             <div className="h-48 w-44 -rotate-6 bg-white rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.1)]" />
@@ -115,7 +115,7 @@ export default function ProcessSection() {
                         lg:top-10"
                     >
                         {/* Image */}
-                        <div className="relative z-10 h-56 w-56 bg-[#f3f3f3] flex items-center justify-center rounded-full">
+                        <div className="relative h-56 w-56 bg-[#f3f3f3] flex items-center justify-center rounded-full">
                             <div className="h-48 w-44 rotate-6 bg-white rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.1)]" />
                             <motion.div
                                 initial={{ scale: 0.8, rotate: -12 }}
@@ -160,7 +160,7 @@ export default function ProcessSection() {
                     >
                         {/* Image */}
                         <div
-                            className="relative right-0 z-10 h-56 w-56 bg-[#f3f3f3] flex items-center justify-center rounded-full
+                            className="relative right-0 h-56 w-56 bg-[#f3f3f3] flex items-center justify-center rounded-full
                             md:right-5"
                         >
                             <div className="h-48 w-44 -rotate-6 bg-white rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.1)]" />

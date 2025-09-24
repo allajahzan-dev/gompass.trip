@@ -77,71 +77,70 @@ export default function Navbar() {
                 </Link>
             </div>
 
-            {/* Nav items on mobile */}
+            {/* Hamburger */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="block cursor-pointer
+                className=" relative z-50 block cursor-pointer
                 lg:hidden"
             >
-                {/* Hamburger */}
                 <Hamburger action={() => setToggle(!toggle)} toggle={toggle} />
+            </motion.div>
 
-                {/* Nav items */}
+            {/* Nav items */}
+            <div
+                className={cn(
+                    "fixed z-30 h-full w-full top-0 left-0 bg-black/60",
+                    "flex items-center justify-end",
+                    toggle ? "-translate-x-0" : "translate-x-full"
+                )}
+            >
                 <div
                     className={cn(
-                        "fixed z-40 h-full w-full top-0 left-0 bg-black/60",
-                        "flex items-center justify-end",
-                        toggle ? "-translate-x-0" : "translate-x-full"
+                        "w-[300px] h-full pt-28 px-10 bg-[#141414] flex flex-col justify-start items-end gap-10",
+                        "transition-transform duration-300 ease-in-out",
+                        toggle ? "translate-x-0" : "translate-x-100",
+                        "sm:w-[400px] md:w-[500px]"
                     )}
                 >
-                    <div
-                        className={cn(
-                            "w-[300px] h-full pt-28 px-10 bg-[#141414] flex flex-col justify-start items-end gap-10",
-                            "transition-transform duration-300 ease-in-out",
-                            toggle ? "translate-x-0" : "translate-x-100",
-                            "sm:w-[400px] md:w-[500px]"
-                        )}
+                    <Link
+                        onNavigate={() => setToggle(false)}
+                        className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
+                        href={"/"}
                     >
-                        <Link
-                            onNavigate={() => setToggle(false)}
-                            className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                            href={"/"}
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            onNavigate={() => setToggle(false)}
-                            className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                            href={"/trips"}
-                        >
-                            Trips
-                        </Link>
-                        <Link
-                            onNavigate={() => setToggle(false)}
-                            className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                            href={"/gallery"}
-                        >
-                            Gallery
-                        </Link>
-                        <Link
-                            onNavigate={() => setToggle(false)}
-                            className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                            href={"/about"}
-                        >
-                            About
-                        </Link>
-                        <Link
-                            onNavigate={() => setToggle(false)}
-                            className="w-full py-1 text-end"
-                            href={"/contact"}
-                        >
-                            Contact
-                        </Link>
-                    </div>
+                        Home
+                    </Link>
+                    <Link
+                        onNavigate={() => setToggle(false)}
+                        className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
+                        href={"/trips"}
+                    >
+                        Trips
+                    </Link>
+                    <Link
+                        onNavigate={() => setToggle(false)}
+                        className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
+                        href={"/gallery"}
+                    >
+                        Gallery
+                    </Link>
+                    <Link
+                        onNavigate={() => setToggle(false)}
+                        className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
+                        href={"/about"}
+                    >
+                        About
+                    </Link>
+                    <Link
+                        onNavigate={() => setToggle(false)}
+                        className="w-full py-1 text-end"
+                        href={"/contact"}
+                    >
+                        Contact
+                    </Link>
                 </div>
-            </motion.div>
+            </div>
         </nav>
     );
 }
