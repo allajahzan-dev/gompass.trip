@@ -1,9 +1,10 @@
-import FooterSection from "./FooterSection";
 import HeroSection from "./HeroSection";
 import PackageSection from "./PackageSection";
-import ProcessSection from "./ProcessSection";
 import ServiceSection from "./ServiceSection";
+import ProcessSection from "./ProcessSection";
 import StoriesSection from "./StoriesSection";
+import FooterSection from "@/components/common/FooterSection";
+
 
 // Main section
 export default function MainSection() {
