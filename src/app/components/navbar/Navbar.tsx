@@ -6,9 +6,16 @@ import Link from "next/link";
 import { Hamburger } from "./Hamburger";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { usePathname } from "next/navigation";
 
 // Navbar
 export default function Navbar() {
+    // Pathname
+    const pathname = usePathname();
+
+    // Text color
+    const [color, setColor] = useState<string>("text-white");
+
     // Toggle navitems
     const [toggle, setToggle] = useState<boolean>(false);
 
@@ -38,10 +45,31 @@ export default function Navbar() {
         };
     }, []);
 
+    // Nav item color
+    useEffect(() => {
+        switch (pathname.split("/")[1]) {
+            case "":
+                return setColor("text-white");
+            case "trips":
+                return setColor("text-black");
+            case "gallery":
+                return setColor("text-black");
+            case "about":
+                return setColor("text-black");
+            case "contact":
+                return setColor("text-black");
+            default:
+                return setColor("text-white");
+        }
+    }, [pathname]);
+
     return (
         <nav
-            className="absolute z-10 top-0 left-0 w-full py-8 px-5 text-white flex items-center justify-between
-            md:px-10 xl:px-24"
+            className={cn(
+                "absolute z-10 top-0 left-0 w-full py-8 px-5 flex items-center justify-between",
+                "md:px-10 xl:px-24",
+                color
+            )}
         >
             <Link href={"/"} className="flex items-center gap-2">
                 <Image
