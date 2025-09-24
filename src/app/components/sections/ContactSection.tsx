@@ -23,7 +23,7 @@ export default function ContactSection() {
                     <i className={cn(playfair.className, "text-[#f15b34]")}>embark</i>
                     <br />
                     on a<i className={cn(playfair.className, "text-[#f15b34]")}>
-                        new
+                    {" "}new
                     </i>{" "}
                     journey?
                 </RevealSectionTitle>

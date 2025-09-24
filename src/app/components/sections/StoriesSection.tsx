@@ -52,7 +52,7 @@ export default async function StoriesSection() {
 
             {/* Stories */}
             <Carousel className="w-full">
-                <CarouselContent className="gap-5">
+                <CarouselContent className="gap-5 py-2">
                     {stories.map((str) => (
                         <CarouselItem
                             key={str.id}

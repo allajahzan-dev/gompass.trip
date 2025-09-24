@@ -9,8 +9,8 @@ export default function HeroSection() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
-            className="relative h-[90vh] flex items-center justify-center text-white
-            sm:h-[86vh] md:h-[90vh] xl:h-[98vh]"
+            className="relative h-[86vh] flex items-center justify-center text-white
+            md:h-[90vh] xl:h-[98vh]"
         >
             {/* Label */}
             <div

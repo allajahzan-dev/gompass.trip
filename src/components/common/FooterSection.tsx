@@ -79,7 +79,7 @@ export default function FooterSection() {
                             <li className="flex items-center gap-4">
                                 <MapPin className="w-5 h-5 text-white self-start" />
                                 123 Wanderer Street, City Name,
-                                <br />
+                                <br className="hidden md:block" />
                                 State Name, Nation
                             </li>
                         </ul>
