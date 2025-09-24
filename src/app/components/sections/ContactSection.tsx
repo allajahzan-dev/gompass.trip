@@ -13,8 +13,8 @@ export default function ContactSection() {
             <div className="flex flex-col items-center justify-center gap-10">
                 {/* Title */}
                 <RevealSectionTitle
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y:0 }}
                     viewport={{ amount: 0.5, once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="col-span-1 lg:col-span-2 xl:text-7xl"
@@ -33,7 +33,7 @@ export default function ContactSection() {
                     className="text-lg text-zinc-600 text-center px-0
                    lg:text-xl md:px-16 lg:px-24"
                 >
-                    Don't let your dream getaway remain a dream any longer. Take action
+                    Don&apos;t let your dream getaway remain a dream any longer. Take action
                     now and let us craft your next unforgettable adventure. Join us in
                     turning your travel fantasies into unforgettable realities.
                 </p>

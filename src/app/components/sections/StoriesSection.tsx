@@ -16,7 +16,7 @@ export default async function StoriesSection() {
 
     return (
         <section
-            className="h-auto px-5 py-10 bg-white flex flex-col gap-16
+            className="h-auto px-5 py-10 bg-[#f3f3f3] flex flex-col gap-16
             md:px-10 xl:px-24 md:py-24"
         >
             {/* Heading */}
