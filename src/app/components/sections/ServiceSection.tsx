@@ -1,5 +1,5 @@
 import { playfair } from "@/app/fonts/playfair";
-import RevealSectionTitle from "../animations/RevealSectionTitle";
+import RevealSectionTitle from "@/components/animation/RevealSectionTitle";
 import { cn } from "@/lib/utils";
 import { fetchServices } from "@/app/utils/fetchServices";
 import { Leaf, Plane, Star, User } from "lucide-react";

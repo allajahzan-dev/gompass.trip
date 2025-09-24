@@ -67,8 +67,8 @@ export default function Navbar() {
         <nav
             className={cn(
                 "absolute z-10 top-0 left-0 w-full py-8 px-5 flex items-center justify-between",
+                color,
                 "md:px-10 xl:px-24",
-                color
             )}
         >
             <Link href={"/"} className="flex items-center gap-2">
@@ -110,23 +110,31 @@ export default function Navbar() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className=" relative z-50 block cursor-pointer
+                className="relative z-50 block cursor-pointer
                 lg:hidden"
             >
-                <Hamburger action={() => setToggle(!toggle)} toggle={toggle} />
+                <Hamburger
+                    action={() => setToggle(!toggle)}
+                    toggle={toggle}
+                    className={
+                        color === "text-black" ? "stroke-[#000000]" : "stroke-[#ffffff]"
+                    }
+                />
             </motion.div>
 
             {/* Nav items */}
             <div
+                onClick={() => setToggle(false)}
                 className={cn(
-                    "fixed z-30 h-full w-full top-0 left-0 bg-black/60",
+                    "fixed z-30 h-full w-full top-0 left-0 bg-black/60 ",
                     "flex items-center justify-end",
                     toggle ? "-translate-x-0" : "translate-x-full"
                 )}
             >
                 <div
+                    onClick={(e) => e.stopPropagation()}
                     className={cn(
-                        "w-[300px] h-full pt-28 px-10 bg-[#141414] flex flex-col justify-start items-end gap-10",
+                        "w-[300px] h-full pt-28 px-10 bg-[#141414] text-white flex flex-col justify-start items-end gap-10",
                         "transition-transform duration-300 ease-in-out",
                         toggle ? "translate-x-0" : "translate-x-100",
                         "sm:w-[400px] md:w-[500px]"

@@ -1,7 +1,7 @@
 "use client";
 
 import { playfair } from "@/app/fonts/playfair";
-import RevealSectionTitle from "../animations/RevealSectionTitle";
+import RevealSectionTitle from "@/components/animation/RevealSectionTitle";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { motion } from "motion/react";

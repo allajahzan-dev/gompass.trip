@@ -1,8 +1,5 @@
-import HeroSection from "./HeroSection";
+import TitleSection from "@/components/common/TitleSection";
 import PackageSection from "./PackageSection";
-import ServiceSection from "./ServiceSection";
-import ProcessSection from "./ProcessSection";
-import StoriesSection from "./StoriesSection";
 import ContactSection from "@/components/common/ContactSection";
 import FooterSection from "@/components/common/FooterSection";
 
@@ -10,11 +7,11 @@ import FooterSection from "@/components/common/FooterSection";
 export default function MainSection() {
     return (
         <main className="overflow-hidden">
-            <HeroSection />
+            <TitleSection
+                bgImage="/images/packages/trip.jpg"
+                text={["Tour", "Packages"]}
+            />
             <PackageSection />
-            <ServiceSection />
-            <ProcessSection />
-            <StoriesSection />
             <ContactSection />
             <FooterSection />
         </main>

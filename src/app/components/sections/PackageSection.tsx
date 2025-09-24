@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { fetchPackages } from "@/app/utils/fetchPackages";
-import AnimatePackages from "../animations/AnimatePackages";
-import RevealSectionTitle from "../animations/RevealSectionTitle";
+import AnimatePackages from "@/components/animation/AnimatePackages";
+import RevealSectionTitle from "@/components/animation/RevealSectionTitle";
 import { cn } from "@/lib/utils";
 import { playfair } from "@/app/fonts/playfair";
 
