@@ -54,7 +54,7 @@ export default function Navbar() {
                 />
 
                 <p className={cn("text-xl font-semibold")}>
-                    <span className="text-[#f15b34]">Go</span>mpass.trip
+                    <span className="text-[#f15b34]">Go</span>mpass
                 </p>
             </Link>
 

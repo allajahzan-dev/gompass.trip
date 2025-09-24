@@ -41,7 +41,7 @@ export default async function ServiceSection() {
                     <RevealSectionTitle
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ amount: 0.5, once: true }}
+                        viewport={{ amount: 0.2, once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="col-span-1"
                     >

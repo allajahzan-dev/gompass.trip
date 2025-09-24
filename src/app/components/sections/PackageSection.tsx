@@ -24,7 +24,7 @@ export default async function PackageSection() {
                 <RevealSectionTitle
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ amount: 0.5, once: true }}
+                    viewport={{ amount: 0.2, once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="col-span-1 lg:col-span-2"
                 >

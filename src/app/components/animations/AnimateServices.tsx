@@ -15,7 +15,7 @@ export default function AnimateServices({ id, children }: Props) {
         <motion.div
             initial={{ opacity: 0, x: id % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ amount: 0.2, once: true }}
             transition={{ duration: 0.5, delay: 0.2 + id * 0.1 }}
         >
             {children}
