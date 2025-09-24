@@ -28,8 +28,8 @@ export default async function ServiceSection() {
 
     return (
         <section
-            className="min-h-screen px-5 py-24 bg-[#f3f3f3]
-            md:px-10 xl:px-24"
+            className="min-h-screen px-5 py-10 bg-[#f3f3f3]
+            md:px-10 xl:px-24 md:py-24"
         >
             <div
                 className="grid grid-cols-1 gap-16

@@ -10,8 +10,8 @@ import { motion } from "motion/react";
 export default function ProcessSection() {
     return (
         <section
-            className="min-h-screen px-5 py-24 bg-white flex flex-col gap-16
-            md:px-10 xl:px-24 lg:gap-3"
+            className="min-h-screen px-5 py-10 bg-white flex flex-col gap-16
+            md:px-10 xl:px-24 md:py-24 lg:gap-3"
         >
             {/* Heading */}
             <div
@@ -76,7 +76,7 @@ export default function ProcessSection() {
                             <motion.div
                                 initial={{ scale: 0.8, rotate: 12 }}
                                 whileInView={{ scale: 1, rotate: -12 }}
-                                viewport={{ amount: 0.5 }}
+                                viewport={{ amount: 0.2, once: true }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
@@ -120,7 +120,7 @@ export default function ProcessSection() {
                             <motion.div
                                 initial={{ scale: 0.8, rotate: -12 }}
                                 whileInView={{ scale: 1, rotate: 12 }}
-                                viewport={{ amount: 0.5 }}
+                                viewport={{ amount: 0.2, once: true }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
@@ -167,7 +167,7 @@ export default function ProcessSection() {
                             <motion.div
                                 initial={{ scale: 0.8, rotate: 12 }}
                                 whileInView={{ scale: 1, rotate: -12 }}
-                                viewport={{ amount: 0.5 }}
+                                viewport={{ amount: 0.2, once: true }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,

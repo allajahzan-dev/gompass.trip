@@ -6,8 +6,6 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
 } from "@/components/ui/carousel";
 import { fetchStories } from "@/app/utils/fetchStories";
 
@@ -18,8 +16,8 @@ export default async function StoriesSection() {
 
     return (
         <section
-            className="h-auto px-5 py-24 bg-white flex flex-col gap-16
-            md:px-10 xl:px-24"
+            className="h-auto px-5 py-10 bg-white flex flex-col gap-16
+            md:px-10 xl:px-24 md:py-24"
         >
             {/* Heading */}
             <div
@@ -79,8 +77,6 @@ export default async function StoriesSection() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselNext />
-                <CarouselPrevious />
             </Carousel>
         </section>
     );
