@@ -17,7 +17,7 @@ export default function ContactSection() {
                     whileInView={{ opacity: 1, y:0 }}
                     viewport={{ amount: 0.2, once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="col-span-1 lg:col-span-2 xl:text-7xl"
+                    className="col-span-1 lg:col-span-2"
                 >
                     Ready to{" "}
                     <i className={cn(playfair.className, "text-[#f15b34]")}>embark</i>
