@@ -1,8 +1,6 @@
-// Contact
+import MainSection from "./components/MainSection";
+
+// Contact 
 export default function Contact() {
-  return (
-    <div className='h-screen flex items-center justify-center'>
-        <h1 className='text-4xl font-bold'>Contact Us</h1>
-    </div>
-  )
+    return <MainSection />
 }

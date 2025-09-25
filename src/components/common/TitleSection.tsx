@@ -25,7 +25,7 @@ export default function TitleSection({ text, bgImage }: Props) {
                 <RevealSectionTitle
                     initial={{ opacity: 0, position: "relative", top: 50, right: 50 }}
                     whileInView={{ opacity: 1, position: "relative", top: 0, right: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ amount: 0.2, once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="col-span-1 lg:col-span-2 text-white xl:text-7xl"
                 >
@@ -35,7 +35,7 @@ export default function TitleSection({ text, bgImage }: Props) {
                 <RevealSectionTitle
                     initial={{ opacity: 0, position: "relative", bottom: 50, left: 50 }}
                     whileInView={{ opacity: 1, position: "relative", bottom: 0, left: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ amount: 0.2, once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="col-span-1 lg:col-span-2 text-white xl:text-7xl"
                 >

@@ -11,7 +11,7 @@ export default function FooterSection() {
     return (
         <footer
             className="h-auto px-5 py-16 pb-5 bg-[#141414] flex flex-col gap-16
-            md:px-10 xl:px-24 lg:pb-16"
+            md:px-10 xl:px-24"
         >
             {/* Footer items */}
             <div
