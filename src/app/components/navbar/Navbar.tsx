@@ -52,8 +52,6 @@ export default function Navbar() {
                 return setColor("text-white");
             case "trips":
                 return setColor("text-black");
-            case "gallery":
-                return setColor("text-black");
             case "about":
                 return setColor("text-black");
             case "contact":
@@ -91,11 +89,11 @@ export default function Navbar() {
                 className="hidden items-center gap-20
                 lg:flex"
             >
+                <Link className="hover:underline underline-offset-8" href={"/"}>
+                    Home
+                </Link>
                 <Link className="hover:underline underline-offset-8" href={"/trips"}>
                     Trips
-                </Link>
-                <Link className="hover:underline underline-offset-8" href={"/gallery"}>
-                    Gallery
                 </Link>
                 <Link className="hover:underline underline-offset-8" href={"/about"}>
                     About
@@ -153,13 +151,6 @@ export default function Navbar() {
                         href={"/trips"}
                     >
                         Trips
-                    </Link>
-                    <Link
-                        onNavigate={() => setToggle(false)}
-                        className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                        href={"/gallery"}
-                    >
-                        Gallery
                     </Link>
                     <Link
                         onNavigate={() => setToggle(false)}
