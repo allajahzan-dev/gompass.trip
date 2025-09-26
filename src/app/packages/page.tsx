@@ -1,6 +1,6 @@
 import MainSection from "./components/MainSection";
 
-// Trips
-export default function Trips() {
+// Packages
+export default function Packages() {
   return <MainSection />
 }

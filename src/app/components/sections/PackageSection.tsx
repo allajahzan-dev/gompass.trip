@@ -41,7 +41,7 @@ export default async function PackageSection() {
                         captivating and transformative travel adventures.
                     </p>
                     <Link
-                        href="/trips"
+                        href="/packages"
                         className="group font-semibold py-2 cursor-pointer"
                     >
                         See All Packages

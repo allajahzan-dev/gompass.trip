@@ -50,7 +50,7 @@ export default function Navbar() {
         switch (pathname.split("/")[1]) {
             case "":
                 return setColor("text-white");
-            case "trips":
+            case "packages":
                 return setColor("text-black");
             case "about":
                 return setColor("text-black");
@@ -73,7 +73,6 @@ export default function Navbar() {
                 <Image
                     width={1000}
                     height={1000}
-                    quality={100}
                     src={"/images/home/hero/logo.jpg"}
                     alt="logo"
                     className="w-8 rounded-full shadow-md border-2 border-white"
@@ -92,8 +91,8 @@ export default function Navbar() {
                 <Link className="hover:underline underline-offset-8" href={"/"}>
                     Home
                 </Link>
-                <Link className="hover:underline underline-offset-8" href={"/trips"}>
-                    Trips
+                <Link className="hover:underline underline-offset-8" href={"/packages"}>
+                    Packages
                 </Link>
                 <Link className="hover:underline underline-offset-8" href={"/about"}>
                     About
@@ -148,9 +147,9 @@ export default function Navbar() {
                     <Link
                         onNavigate={() => setToggle(false)}
                         className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                        href={"/trips"}
+                        href={"/packages"}
                     >
-                        Trips
+                        Packages
                     </Link>
                     <Link
                         onNavigate={() => setToggle(false)}
