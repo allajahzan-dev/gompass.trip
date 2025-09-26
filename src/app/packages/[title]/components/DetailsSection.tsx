@@ -75,12 +75,12 @@ export default function DetailsSection({ pkg }: Props) {
                 <div className="flex flex-col gap-10">
                     <h1 className="text-4xl text-black font-bold">Travel Plans</h1>
 
-                    <Accordion type="single" collapsible className="text-black">
+                    <Accordion type="single" collapsible className="text-black space-y-5">
                         {pkg.plans.map((plan, index) => (
                             <AccordionItem
                                 key={index}
-                                value="item-1"
-                                className="bg-[#f2f1f3] px-10 py-2 rounded-lg"
+                                value={`item-${index}`}
+                                className="bg-[#f2f1f3] px-10 py-2 border-none rounded-lg"
                             >
                                 <AccordionTrigger className="text-xl cursor-pointer">
                                     <div className="flex items-center gap-24">
