@@ -3,7 +3,6 @@
 import { IPackage } from "@/app/utils/fetchPackages";
 import { motion } from "motion/react";
 import Image from "next/image";
-import Link from "next/link";
 
 // Interface for Props
 interface Props {
@@ -13,7 +12,7 @@ interface Props {
 // Animate packages
 export default function AnimatePackages({ pkg }: Props) {
     return (
-        <Link href={`/packages/${pkg.title.split(" ").join("-").toLowerCase()}`}>
+        <a href={`/packages/${pkg.title.split(" ").join("-").toLowerCase()}`}>
             <motion.div
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.02 }}
@@ -41,6 +40,6 @@ export default function AnimatePackages({ pkg }: Props) {
                 <p className="text-base">{pkg.price}</p>
             </div>
         </motion.div>
-        </Link>
+        </a>
     );
 }
