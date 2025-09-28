@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { dmSans } from "./fonts/dmSans";
 import Navbar from "./components/navbar/Navbar";
+import "./globals.css"
 
 export const metadata: Metadata = {
     title: "Gompass.trip",
