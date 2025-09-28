@@ -1,19 +1,23 @@
 import BASE_URL from "@/constants/baseUrl";
 
-// Interface for IPackages
-export interface IPackages {
+// Interface for IPackage
+export interface IPackage {
     id: number;
-    Title: string;
+    title: string;
     location: string;
     days: string;
-    image: string;
-    description: string;
+    images: string[];
+    description1: string;
+    description2: string;
     price: string;
+    includes: string[];
+    excludes: string[];
+    plans: {day: string, title: string, activities: string[]}[]
 }
 
 // Fetch packages
 export const fetchPackages = async (): Promise<{
-    packages: IPackages[];
+    packages: IPackage[];
 }> => {
     try {
         const resp = await fetch(`${BASE_URL}/data/packages.json`);

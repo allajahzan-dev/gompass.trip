@@ -50,7 +50,7 @@ export default function Navbar() {
         switch (pathname.split("/")[1]) {
             case "":
                 return setColor("text-white");
-            case "trips":
+            case "packages":
                 return setColor("text-black");
             case "about":
                 return setColor("text-black");
@@ -89,16 +89,16 @@ export default function Navbar() {
                 className="hidden items-center gap-20
                 lg:flex"
             >
-                <Link className="hover:underline underline-offset-8" href={"/"}>
+                <Link className={cn("hover:underline", pathname === "/" && "underline")} href={"/"}>
                     Home
                 </Link>
-                <Link className="hover:underline underline-offset-8" href={"/trips"}>
-                    Trips
+                <Link className={cn("hover:underline", pathname === "/packages" && "underline")} href={"/packages"}>
+                    Packages
                 </Link>
-                <Link className="hover:underline underline-offset-8" href={"/about"}>
+                <Link className={cn("hover:underline", pathname === "/about" && "underline")} href={"/about"}>
                     About
                 </Link>
-                <Link className="hover:underline underline-offset-8" href={"/contact"}>
+                <Link className={cn("hover:underline", pathname === "/contact" && "underline")} href={"/contact"}>
                     Contact
                 </Link>
             </div>
@@ -148,9 +148,9 @@ export default function Navbar() {
                     <Link
                         onNavigate={() => setToggle(false)}
                         className="w-full py-1 text-end border-b border-zinc-600 hover:border-white"
-                        href={"/trips"}
+                        href={"/packages"}
                     >
-                        Trips
+                        Packages
                     </Link>
                     <Link
                         onNavigate={() => setToggle(false)}

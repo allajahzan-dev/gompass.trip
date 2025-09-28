@@ -1,18 +1,19 @@
 "use client";
 
-import { IPackages } from "@/app/utils/fetchPackages";
+import { IPackage } from "@/app/utils/fetchPackages";
 import { motion } from "motion/react";
 import Image from "next/image";
 
 // Interface for Props
 interface Props {
-    pkg: IPackages;
+    pkg: IPackage;
 }
 
 // Animate packages
 export default function AnimatePackages({ pkg }: Props) {
     return (
-        <motion.div
+        <a href={`/packages/${pkg.title.split(" ").join("-").toLowerCase()}`}>
+            <motion.div
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
@@ -22,8 +23,8 @@ export default function AnimatePackages({ pkg }: Props) {
             <Image
                 width={200}
                 height={200}
-                src={pkg.image}
-                alt={pkg.Title}
+                src={pkg.images[0]}
+                alt={pkg.title}
                 className="h-full w-full object-cover object-center scale-105"
             />
 
@@ -33,11 +34,12 @@ export default function AnimatePackages({ pkg }: Props) {
             {/* Details */}
             <div className="w-full p-5 absolute bottom-0 left-0 text-white flex items-end justify-between">
                 <div className="flex flex-col gap-1">
-                    <h1 className="text-xl font-semibold">{pkg.Title}</h1>
+                    <h1 className="text-xl font-semibold">{pkg.title}</h1>
                     <p>{pkg.days}</p>
                 </div>
-                <p className="text-xl">{pkg.price}</p>
+                <p className="text-base">{pkg.price}</p>
             </div>
         </motion.div>
+        </a>
     );
 }
