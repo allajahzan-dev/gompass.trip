@@ -2,39 +2,164 @@
     "packages": [
         {
             "id": 1,
-            "Title": "Tropical Paradise Recreation",
+            "href": "/packages/tropical-paradise-recreation",
+            "title": "Tropical Paradise Recreation",
             "location": "Bali, Indonesia",
             "days": "7 days, 6 nights",
-            "image": "/images/packages/package-1.jpg",
-            "description": "",
-            "price": "₹25,000"
+            "images": [
+                "/images/packages/package1/img1.jpg",
+                "/images/packages/package1/img2.jpg",
+                "/images/packages/package1/img3.jpg",
+                "/images/packages/package1/img4.jpg",
+                "/images/packages/package1/img5.jpg"
+            ],
+            "description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere laoreet lobortis. Praesent molestie condimentum libero vitae posuere. Sed tristique enim quis nibh ",
+            "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere laoreet lobortis. Praesent molestie condimentum libero vitae posuere. Sed tristique enim quis nibh faucibus convallis. Morbi sed congue neque, sit amet tristique eros. Mauris condimentum, lectus vulputate auctor maximus",
+            "price": "₹25,00",
+            "includes": [
+                "abc",
+                "def",
+                "ghi"
+            ],
+            "excludes": [
+                "abc",
+                "def",
+                "ghi"
+            ],
+            "plans": [
+                {
+                    "day": "Day 01",
+                    "title": "First place",
+                    "activities": [
+                        "abc",
+                        "def",
+                        "ghi"
+                    ]
+                }
+            ]
         },
         {
             "id": 2,
-            "Title": "Cruise Getaway Expedition",
+            "href": "/packages/cruise-getaway-expedition",
+            "title": "Cruise Getaway Expedition",
             "location": "Caribbean Islands",
             "days": "7 days, 6 nights",
-            "image": "/images/packages/package-2.jpg",
-            "description": "",
-            "price": "₹20,000"
+            "images": [
+                "/images/packages/package2/img1.jpg",
+                "/images/packages/package2/img2.jpg",
+                "/images/packages/package2/img3.jpg",
+                "/images/packages/package2/img4.jpg",
+                "/images/packages/package2/img5.jpg"
+            ],
+            "description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere laoreet lobortis. Praesent molestie condimentum libero vitae posuere. Sed tristique enim quis nibh ",
+            "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere laoreet lobortis. Praesent molestie condimentum libero vitae posuere. Sed tristique enim quis nibh faucibus convallis. Morbi sed congue neque, sit amet tristique eros. Mauris condimentum, lectus vulputate auctor maximus",
+            "price": "₹20,00",
+            "includes": [
+                "abc",
+                "def",
+                "ghi"
+            ],
+            "excludes": [
+                "abc",
+                "def",
+                "ghi"
+            ],
+            "plans": [
+                {
+                    "day": "Day 01",
+                    "title": "First place",
+                    "activities": [
+                        "abc",
+                        "def",
+                        "ghi"
+                    ]
+                },
+                {
+                    "day": "Day 02",
+                    "title": "Second place",
+                    "activities": [
+                        "abc",
+                        "def",
+                        "ghi"
+                    ]
+                }
+            ]
         },
         {
             "id": 3,
-            "Title": "Cultural Immersion in Morocco",
+            "href": "/packages/cultural-immersion-in-morocco",
+            "title": "Cultural Immersion in Morocco",
             "location": "Cusco, Peru",
             "days": "6 Days, 5 Nights",
-            "image": "/images/packages/package-3.jpg",
-            "description": "",
-            "price": "₹25,000"
+            "images": [
+                "/images/packages/package3/img1.jpg",
+                "/images/packages/package3/img2.jpg",
+                "/images/packages/package3/img3.jpg",
+                "/images/packages/package3/img4.jpg",
+                "/images/packages/package3/img5.jpg"
+            ],
+            "description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere laoreet lobortis. Praesent molestie condimentum libero vitae posuere. Sed tristique enim quis nibh ",
+            "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere laoreet lobortis. Praesent molestie condimentum libero vitae posuere. Sed tristique enim quis nibh faucibus convallis. Morbi sed congue neque, sit amet tristique eros. Mauris condimentum, lectus vulputate auctor maximus",
+            "price": "₹25,00",
+            "includes": [
+                "abc",
+                "def",
+                "ghi"
+            ],
+            "excludes": [
+                "abc",
+                "def",
+                "ghi"
+            ],
+            "plans": [
+                {
+                    "day": "Day 01",
+                    "title": "First place",
+                    "activities": [
+                        "abc",
+                        "def",
+                        "ghi"
+                    ]
+                }
+            ]
         },
         {
             "id": 4,
-            "Title": "River Expedition in Thuringia",
+            "href": "/packages/river-expedition-in-thuringia",
+            "title": "River Expedition in Thuringia",
             "location": "Thuringia, Germany",
             "days": "7 days, 6 nights",
-            "image": "/images/packages/package-4.jpg",
-            "description": "",
-            "price": "₹25,000"
+            "images": [
+                "/images/packages/package4/img1.jpg",
+                "/images/packages/package4/img2.jpg",
+                "/images/packages/package4/img3.jpg",
+                "/images/packages/package4/img4.jpg",
+                "/images/packages/package4/img5.jpg"
+            ],
+            "description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere laoreet lobortis. Praesent molestie condimentum libero vitae posuere. Sed tristique enim quis nibh ",
+            "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere laoreet lobortis. Praesent molestie condimentum libero vitae posuere. Sed tristique enim quis nibh faucibus convallis. Morbi sed congue neque, sit amet tristique eros. Mauris condimentum, lectus vulputate auctor maximus",
+            "price": "₹25,00",
+            "includes": [
+                "abc",
+                "def",
+                "ghi"
+            ],
+            "excludes": [
+                "abc",
+                "def",
+                "ghi"
+            ],
+            "plans": [
+                {
+                    "day": "Day 01",
+                    "title": "First place",
+                    "activities": [
+                        "abc",
+                        "def",
+                        "ghi"
+                    ]
+                }
+            ]
         }
     ]
 }
