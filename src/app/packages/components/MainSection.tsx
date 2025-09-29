@@ -1,5 +1,5 @@
 import TitleSection from "@/components/common/TitleSection";
-import PackageSection from "./PackageSection";
+import PackageSectionGraphQL from "./PackageSectionGraphQL";
 import ContactSection from "@/components/common/ContactSection";
 import FooterSection from "@/components/common/FooterSection";
 
@@ -11,7 +11,7 @@ export default function MainSection() {
                 bgImage="/images/packages/trip.jpg"
                 text={["Tour", "Packages"]}
             />
-            <PackageSection />
+            <PackageSectionGraphQL />
             <ContactSection />
             <FooterSection />
         </main>
