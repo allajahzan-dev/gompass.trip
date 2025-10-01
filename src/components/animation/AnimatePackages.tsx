@@ -24,7 +24,7 @@ export default function AnimatePackages({ pkg }: Props) {
                 width={200}
                 height={200}
                 // src={pkg.images[0]}
-                src={`http://localhost:1337` + pkg?.images[0].url}
+                src={`http://localhost:1337` + pkg.images[0].url}
                 alt={pkg.title}
                 className="h-full w-full object-cover object-center scale-105"
             />
