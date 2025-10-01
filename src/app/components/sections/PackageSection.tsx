@@ -41,7 +41,7 @@ export default async function PackageSection() {
                         captivating and transformative travel adventures.
                     </p>
                     <Link
-                        href="/trips"
+                        href="/packages"
                         className="group font-semibold py-2 cursor-pointer"
                     >
                         See All Packages
@@ -53,14 +53,23 @@ export default async function PackageSection() {
             </div>
 
             {/* Packages */}
-            <div
-                className="grid grid-cols-1 gap-5
+            {packages.length > 0 && (
+                <div
+                    className="grid grid-cols-1 gap-5
                 md:grid-cols-2 xl:grid-cols-4"
-            >
-                {packages.map((pkg) => (
-                    <AnimatePackages key={pkg.id} pkg={pkg} />
-                ))}
-            </div>
+                >
+                    {packages.map((pkg) => (
+                        <AnimatePackages key={pkg.documentId} pkg={pkg} />
+                    ))}
+                </div>
+            )}
+
+            {/* No packages */}
+            {packages.length === 0 && (
+                <div className="flex-1 flex items-center justify-center">
+                    <h1 className="text-3xl font-semibold">Packages not found!</h1>
+                </div>
+            )}
         </section>
     );
 }

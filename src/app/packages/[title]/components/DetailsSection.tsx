@@ -49,7 +49,8 @@ export default function DetailsSection({ pkg }: Props) {
                             {pkg.includes.map((inlcude, index) => (
                                 <span key={index} className="flex items-center gap-2">
                                     <CheckCircle2 className="w-8 h-8 fill-black text-white" />
-                                    <p className="text-xl">{inlcude}</p>
+                                    {/* <p className="text-xl">{inlcude}</p> */}
+                                    <p className="text-xl">{inlcude.value}</p>
                                 </span>
                             ))}
                         </div>
@@ -61,7 +62,8 @@ export default function DetailsSection({ pkg }: Props) {
                             {pkg.excludes.map((exclude, index) => (
                                 <span key={index} className="flex items-center gap-2">
                                     <CircleX className="w-8 h-8 fill-black text-white" />
-                                    <p className="text-xl">{exclude}</p>
+                                    {/* <p className="text-xl">{exclude}</p> */}
+                                    <p className="text-xl">{exclude.value}</p>
                                 </span>
                             ))}
                         </div>
@@ -93,7 +95,8 @@ export default function DetailsSection({ pkg }: Props) {
                                         {plan.activities.map((act, index) => (
                                             <span key={index} className="flex items-center">
                                                 <Dot className="w-5 h-5" />
-                                                <p className="text-base">{act}</p>
+                                                {/* <p className="text-base">{act}</p> */}
+                                                <p className="text-base">{act.activity}</p>
                                             </span>
                                         ))}
                                     </div>

@@ -23,7 +23,8 @@ export default function AnimatePackages({ pkg }: Props) {
             <Image
                 width={200}
                 height={200}
-                src={pkg.images[0]}
+                // src={pkg.images[0]}
+                src={`http://localhost:1337` + pkg?.images[0].url}
                 alt={pkg.title}
                 className="h-full w-full object-cover object-center scale-105"
             />
@@ -37,7 +38,7 @@ export default function AnimatePackages({ pkg }: Props) {
                     <h1 className="text-xl font-semibold">{pkg.title}</h1>
                     <p>{pkg.days}</p>
                 </div>
-                <p className="text-base">{pkg.price}</p>
+                <p className="text-base">₹{pkg.price}</p>
             </div>
         </motion.div>
         </a>

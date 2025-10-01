@@ -50,7 +50,8 @@ export default function TitleSection({ pkg }: Props) {
             {/* Image */}
             <div
                 style={{
-                    backgroundImage: `url(${pkg.images[1]})`,
+                    // backgroundImage: `url(${pkg.images[1]})`,
+                    backgroundImage: `url(http://localhost:1337${pkg.images[1].url})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
