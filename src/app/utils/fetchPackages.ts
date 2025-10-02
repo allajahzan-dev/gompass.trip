@@ -76,12 +76,12 @@ export const fetchPackages = async (): Promise<{
 
         if (result.errors) {
             console.error("GraphQL errors:", result.errors);
-            return [] as any;
+            return  { packages: [] };
         }
 
         return result.data;
     } catch (error) {
         console.error("Fetch error:", error);
-        return [] as any;
+        return  { packages: [] };
     }
 };
