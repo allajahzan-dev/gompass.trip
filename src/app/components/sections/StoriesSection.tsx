@@ -8,7 +8,7 @@ import {
     CarouselItem,
 } from "@/components/ui/carousel";
 import { fetchStories } from "@/app/utils/fetchStories";
-import { SERVER_URL } from "@/constants/baseUrl";
+import { SERVER_URL } from "@/constants/url";
 
 // Stories section
 export default async function StoriesSection() {

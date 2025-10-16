@@ -1,7 +1,7 @@
 "use client";
 
 import { IPackage } from "@/app/utils/fetchPackages";
-import { SERVER_URL } from "@/constants/baseUrl";
+import { SERVER_URL } from "@/constants/url";
 import { motion } from "motion/react";
 import Image from "next/image";
 

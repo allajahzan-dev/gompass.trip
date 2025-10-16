@@ -1,4 +1,4 @@
-import { SERVER_URL } from "@/constants/baseUrl";
+import { SERVER_URL } from "@/constants/url";
 
 // Interface for IStories
 export interface IStories {
