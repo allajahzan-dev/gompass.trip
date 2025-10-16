@@ -2,6 +2,7 @@ import { IPackage } from "@/app/utils/fetchPackages";
 import RevealSectionTitle from "@/components/animation/RevealSectionTitle";
 import { SERVER_URL } from "@/constants/url";
 import { Clock, MapPin } from "lucide-react";
+import Image from "next/image";
 
 // Interface for Props
 interface Props {
@@ -49,14 +50,12 @@ export default function TitleSection({ pkg }: Props) {
             </div>
 
             {/* Image */}
-            <div
-                style={{
-                    // backgroundImage: `url(${pkg.images[1]})`,
-                    backgroundImage: `url("${SERVER_URL + pkg.images[1].url}")`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-                className="h-screen"
+            <Image
+                width={1000}
+                height={1000}
+                src={SERVER_URL + pkg.images[1].url}
+                alt={pkg.title}
+                className="h-screen w-full object-cover object-center"
             />
         </section>
     );
