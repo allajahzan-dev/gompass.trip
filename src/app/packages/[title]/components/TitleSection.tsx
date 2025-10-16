@@ -53,7 +53,7 @@ export default function TitleSection({ pkg }: Props) {
             <Image
                 width={1000}
                 height={1000}
-                src={SERVER_URL + pkg.images[1].url}
+                src={SERVER_URL + (pkg.images[0].url || "")}
                 alt={pkg.title}
                 className="h-screen w-full object-cover object-center"
             />
