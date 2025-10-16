@@ -70,6 +70,7 @@ export const fetchPackages = async (): Promise<{
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ query }),
+            cache: "no-cache",
         });
 
         const result = await response.json();
