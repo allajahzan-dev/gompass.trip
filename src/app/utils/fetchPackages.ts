@@ -1,4 +1,4 @@
-// import BASE_URL from "@/constants/baseUrl";
+import { SERVER_URL } from "@/constants/baseUrl";
 
 // Interface for IPackage
 export interface IPackage {
@@ -64,7 +64,7 @@ export const fetchPackages = async (): Promise<{
   `;
 
     try {
-        const response = await fetch("http://localhost:1337/graphql", {
+        const response = await fetch(`${SERVER_URL}/graphql`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

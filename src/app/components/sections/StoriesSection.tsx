@@ -8,6 +8,7 @@ import {
     CarouselItem,
 } from "@/components/ui/carousel";
 import { fetchStories } from "@/app/utils/fetchStories";
+import { SERVER_URL } from "@/constants/baseUrl";
 
 // Stories section
 export default async function StoriesSection() {
@@ -65,7 +66,7 @@ export default async function StoriesSection() {
                                         <Image
                                             width={64}
                                             height={64}
-                                            src={`http://localhost:1337` + str.image.url}
+                                            src={SERVER_URL + str.image.url}
                                             alt="avatar"
                                             className="w-12 h-12 rounded-full"
                                         />

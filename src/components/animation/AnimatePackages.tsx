@@ -1,6 +1,7 @@
 "use client";
 
 import { IPackage } from "@/app/utils/fetchPackages";
+import { SERVER_URL } from "@/constants/baseUrl";
 import { motion } from "motion/react";
 import Image from "next/image";
 
@@ -24,7 +25,7 @@ export default function AnimatePackages({ pkg }: Props) {
                 width={200}
                 height={200}
                 // src={pkg.images[0]}
-                src={`http://localhost:1337` + pkg.images[0].url}
+                src={SERVER_URL + pkg.images[0].url}
                 alt={pkg.title}
                 className="h-full w-full object-cover object-center scale-105"
             />

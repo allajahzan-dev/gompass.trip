@@ -3,4 +3,6 @@ const BASE_URL: string =
         ? "http://localhost:3000"
         : "https://gompasstrip.vercel.app";
 
-export default BASE_URL;
+const SERVER_URL: string = "http://54.252.163.190:1337";
+
+export { BASE_URL, SERVER_URL }
