@@ -4,8 +4,9 @@
 const BASE_URL: string =
     process.env.NODE_ENV === "development"
         ? "http://localhost:3000" 
-        : "https://gompasstrip.vercel.app";
+        : "https://gompass.com";
 
-const SERVER_URL: string = "http://54.252.163.190:1337";
+// const SERVER_URL: string = "http://localhost:1337";
+const SERVER_URL: string = "https://api.gompass.com";
 
 export { BASE_URL, SERVER_URL };
