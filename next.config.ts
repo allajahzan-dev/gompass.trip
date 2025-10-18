@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "54.252.163.190", // or localhost
+        protocol: "https",
+        hostname: "api.gompass.com", // or localhost
         port: "1337",
         pathname: "/uploads/**",
       },
