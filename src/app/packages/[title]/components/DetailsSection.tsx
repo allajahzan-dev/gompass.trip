@@ -80,7 +80,7 @@ export default function DetailsSection({ pkg }: Props) {
                             <AccordionItem
                                 key={index}
                                 value={`item-${index}`}
-                                className="bg-[#f2f1f3] px-8 py-2 flex flex-col gap-5 border-none rounded-lg
+                                className="bg-[#f2f1f3] px-8 py-2 flex flex-col gap-5 border border-black rounded-lg
                                 md:flex-row "
                             >
                                 <AccordionTrigger className="text-xl cursor-pointer">
