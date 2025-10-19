@@ -1,8 +1,6 @@
 import { fetchContacts } from "@/app/utils/fetchContacts";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Mail, Map, Phone } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 // Contact form section
 export default async function ContactFormSection() {
@@ -19,28 +17,7 @@ export default async function ContactFormSection() {
                 lg:grid-cols-3 lg:gap-20"
             >
                 {/* Contact form */}
-                <form
-                    className="col-span-1 space-y-5
-                    lg:col-span-2"
-                >
-                    <div className="flex items-center gap-5">
-                        <Input
-                            placeholder="Name"
-                            className="bg-[#f3f3f3] p-6 border-none"
-                        />
-                        <Input
-                            placeholder="Name"
-                            className="bg-[#f3f3f3] p-6 border-none"
-                        />
-                    </div>
-                    <Textarea
-                        placeholder="Message"
-                        className="h-55 bg-[#f3f3f3] p-6 border-none resize-none"
-                    />
-                    <Button className="w-full p-6 text-base cursor-pointer">
-                        Submit
-                    </Button>
-                </form>
+                <ContactForm/>
 
                 {/* Details */}
                 <div className="flex flex-col gap-5">
