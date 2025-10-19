@@ -71,7 +71,7 @@ export default async function FooterSection() {
                     <div className="space-y-6">
                         <h1 className="text-white font-semibold text-xl">Contacts</h1>
                         <ul className="flex flex-col gap-4 text-[#c4c4c4] text-base [&>a]:hover:underline [&>a]:cursor-pointer">
-                            <a href={"tel:1234567890"} className="flex items-center gap-4">
+                            <a href={`tel:+91${contact?.phone || "8157905882"}`} className="flex items-center gap-4">
                                 <Phone className="w-5 h-5 text-white shrink-0" />
                                 +91 {contact?.phone || "8157905882"}
                             </a>
@@ -79,7 +79,6 @@ export default async function FooterSection() {
                                 <MapPin className="w-5 h-5 text-white shrink-0 self-start" />
                                 {contact?.address ||
                                     "5th mile, Mananthavady, Kellur, Kerala 670645"}
-                                {/* <br className="hidden md:block" /> */}
                             </li>
                         </ul>
                     </div>

@@ -17,7 +17,7 @@ export default async function ContactFormSection() {
                 lg:grid-cols-3 lg:gap-20"
             >
                 {/* Contact form */}
-                <ContactForm/>
+                <ContactForm />
 
                 {/* Details */}
                 <div className="flex flex-col gap-5">
@@ -26,9 +26,13 @@ export default async function ContactFormSection() {
                         <div className="p-4 border border-black rounded-full">
                             <Phone className="w-5 h-5" />
                         </div>
-                        <div className="space-y-2 ">
+                        <div className="space-y-2 ">``
                             <p className="font-semibold">Phone Number</p>
-                            <p>+91 {contact?.phone || "8157905882"}</p>
+                            <p>
+                                <a href={`tel:+91${contact?.phone || "8157905882"}`}>
+                                    +91 {contact?.phone || "8157905882"}
+                                </a>
+                            </p>
                         </div>
                     </div>
 
