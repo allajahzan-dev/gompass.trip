@@ -23,7 +23,7 @@ export default async function FooterSection() {
                     <ul className="flex flex-col gap-2 text-[#c4c4c4] text-base [&>a]:hover:underline [&>a]:cursor-pointer">
                         <Link href={"/"}>Home</Link>
                         <Link href={"/about"}>About Us</Link>
-                        <Link href={"/trips"}>Trip Packages</Link>
+                        <Link href={"/packages"}>Trip Packages</Link>
                         <Link href={"/gallery"}>Gallery</Link>
                         <Link href={"/contact"}>Contact</Link>
                     </ul>
@@ -33,8 +33,8 @@ export default async function FooterSection() {
                 <div className="space-y-3">
                     <h1 className="text-white font-semibold text-lg">Services</h1>
                     <ul className="flex flex-col gap-2 text-[#c4c4c4] text-base [&>a]:hover:underline [&>a]:cursor-pointer">
-                        <Link href={"/trips"}>Trip Itinerary</Link>
-                        <Link href={"/trips"}>Trip Preparations</Link>
+                        <Link href={"/packages"}>Trip Itinerary</Link>
+                        <Link href={"/packages"}>Trip Preparations</Link>
                         <Link href={"/contact"}>Booking Form</Link>
                     </ul>
                 </div>
@@ -43,10 +43,10 @@ export default async function FooterSection() {
                 <div className="space-y-3">
                     <h1 className="text-white font-semibold text-lg">Packages</h1>
                     <ul className="flex flex-col gap-2 text-[#c4c4c4] text-base [&>a]:hover:underline [&>a]:cursor-pointer">
-                        <Link href={"/trips"}>Popular Trip</Link>
-                        <Link href={"/trips"}>Personal Tour</Link>
-                        <Link href={"/trips"}>Group Tour</Link>
-                        <Link href={"/trips"}>Business Tour</Link>
+                        <Link href={"/packages"}>Popular Trip</Link>
+                        <Link href={"/packages"}>Personal Tour</Link>
+                        <Link href={"/packages"}>Group Tour</Link>
+                        <Link href={"/packages"}>Business Tour</Link>
                         <Link href={"/about"}>Testimonials</Link>
                     </ul>
                 </div>

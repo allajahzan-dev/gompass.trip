@@ -67,7 +67,7 @@ export default function AboutSection() {
                                 while preserving its beauty for generations to come.
                             </p>
                             <Link
-                                href="/trips"
+                                href="/packages"
                                 className="font-semibold px-8 py-2 bg-black hover:bg-zinc-800 text-white transition-colors duration-300
                                 rounded-full cursor-pointer"
                             >
