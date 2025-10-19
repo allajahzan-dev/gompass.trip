@@ -14,13 +14,13 @@ export default function ImagesSection({ pkg }: Props) {
 
     return (
         <section
-            className="min-h-[90vh] px-5 pb-16 bg-white grid grid-cols-1 gap-5
+            className="h-auto px-5 pb-16 bg-white grid grid-cols-1 gap-5
             md:px-10 xl:px-24 md:pb-24 lg:grid-cols-3"
         >
             <div
                 className={cn(
                     images.length > 3 ? "col-span-1 lg:col-span-2" : "col-span-3",
-                    "h-max"
+                    "h-[90vh]"
                 )}
             >
                 {images[2]?.url && (
@@ -35,7 +35,7 @@ export default function ImagesSection({ pkg }: Props) {
             </div>
 
             {images.length >= 4 && (
-                <div className="grid grid-rows-2 gap-5">
+                <div className="grid grid-rows-2 gap-5 h-full">
                     {images[3]?.url && (
                         <Image
                             src={SERVER_URL + images[3].url}
