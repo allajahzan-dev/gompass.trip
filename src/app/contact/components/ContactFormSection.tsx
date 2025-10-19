@@ -36,18 +36,18 @@ export default async function ContactFormSection() {
                     </a>
 
                     {/* Email */}
-                    <div className="flex items-center gap-5 p-5 border border-black rounded-2xl">
+                    <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=info@gompass.com&su=&body=`} target="_blank" className="flex items-center gap-5 p-5 border border-black rounded-2xl">
                         <div className="p-4 border border-black rounded-full">
                             <Mail className="w-5 h-5" />
                         </div>
                         <div className="space-y-2 ">
                             <p className="font-semibold">Email Address</p>
-                            <p>info@gompass.online</p>
+                            <p>info@gompass.com</p>
                         </div>
-                    </div>
+                    </a>
 
                     {/* Address */}
-                    <div className="flex items-center gap-5 p-5 border border-black rounded-2xl">
+                    <a href="https://maps.app.goo.gl/AHkjQtt9wuSDg7i4A" target="_blank" className="flex items-center gap-5 p-5 border border-black rounded-2xl">
                         <div className="p-4 border border-black rounded-full">
                             <Map className="w-5 h-5" />
                         </div>
@@ -58,7 +58,7 @@ export default async function ContactFormSection() {
                                     "5th mile, Mananthavady, Kellur, Kerala 670645"}
                             </p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>

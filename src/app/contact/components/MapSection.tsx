@@ -37,7 +37,7 @@ export default function MapSection() {
             {/* Map */}
             <div className="w-full h-[500px]">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238055.77421427326!2d75.46882730348686!3d11.243326200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba659e7fa565f7f%3A0xf43c062d5e4eefda!2sSouth%20Beach%20Kozhikode!5e1!3m2!1sen!2sin!4v1758767960237!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3712.9336847818295!2d76.00829677779532!3d11.750265358719151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5df06d8ceebfd%3A0x98af067024383961!2sGompass%20travel%20experts!5e1!3m2!1sen!2sin!4v1760858761547!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     allowFullScreen
