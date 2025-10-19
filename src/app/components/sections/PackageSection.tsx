@@ -58,7 +58,7 @@ export default async function PackageSection() {
                     className="grid grid-cols-1 gap-5
                 md:grid-cols-2 xl:grid-cols-4"
                 >
-                    {packages.map((pkg) => (
+                    {packages.reverse().map((pkg) => (
                         <AnimatePackages key={pkg.documentId} pkg={pkg} />
                     ))}
                 </div>

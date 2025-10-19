@@ -76,7 +76,7 @@ export default function ProcessSection() {
                             <motion.div
                                 initial={{ scale: 0.8, rotate: 12 }}
                                 whileInView={{ scale: 1, rotate: -12 }}
-                                viewport={{ amount: 0.2, once: true }}
+                                viewport={{ amount: 0.4, once: true }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
@@ -120,7 +120,7 @@ export default function ProcessSection() {
                             <motion.div
                                 initial={{ scale: 0.8, rotate: -12 }}
                                 whileInView={{ scale: 1, rotate: 12 }}
-                                viewport={{ amount: 0.2, once: true }}
+                                viewport={{ amount: 0.4, once: true }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
@@ -167,7 +167,7 @@ export default function ProcessSection() {
                             <motion.div
                                 initial={{ scale: 0.8, rotate: 12 }}
                                 whileInView={{ scale: 1, rotate: -12 }}
-                                viewport={{ amount: 0.2, once: true }}
+                                viewport={{ amount: 0.4, once: true }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 100,
@@ -195,7 +195,7 @@ export default function ProcessSection() {
                             <p className="text-center text-zinc-600 text-nowrap">
                                 Experience the journey without
                                 <br />
-                                stress we handle everything for you.
+                                stress, we handle everything for you.
                             </p>
                         </div>
                     </div>
