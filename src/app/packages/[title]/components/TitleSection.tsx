@@ -2,7 +2,6 @@ import { IPackage } from "@/app/utils/fetchPackages";
 import RevealSectionTitle from "@/components/animation/RevealSectionTitle";
 import { SERVER_URL } from "@/constants/url";
 import { Clock, MapPin } from "lucide-react";
-import { div } from "motion/react-client";
 import Image from "next/image";
 
 // Interface for Props
