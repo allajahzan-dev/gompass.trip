@@ -75,7 +75,7 @@ export default function DetailsSection({ pkg }: Props) {
                 <div className="flex flex-col gap-10">
                     <h1 className="text-4xl text-black font-bold">Travel Plans:</h1>
 
-                    <Accordion type="single" collapsible className="text-black space-y-5">
+                    <Accordion type="single" collapsible className="text-black space-y-5 py-2">
                         {pkg.plans.map((plan, index) => (
                             <AccordionItem
                                 key={index}
