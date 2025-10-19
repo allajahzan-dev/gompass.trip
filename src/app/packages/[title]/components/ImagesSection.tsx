@@ -1,4 +1,5 @@
 import { IPackage } from "@/app/utils/fetchPackages";
+import { SERVER_URL } from "@/constants/url";
 import Image from "next/image";
 
 // Interface for Props
@@ -18,7 +19,7 @@ export default function ImagesSection({ pkg }: Props) {
                     <div className="col-span-1 lg:col-span-2">
                         {pkg.images[2].url && (
                             <Image
-                                src={pkg.images[2].url}
+                                src={SERVER_URL + pkg.images[2].url}
                                 alt={"pkg-image-3"}
                                 width={1000}
                                 height={1000}
@@ -29,7 +30,7 @@ export default function ImagesSection({ pkg }: Props) {
                     <div className="grid grid-rows-2 gap-5">
                         {pkg.images[3].url && (
                             <Image
-                                src={pkg.images[3].url}
+                                src={SERVER_URL + pkg.images[3].url}
                                 alt={"pkg-image-3"}
                                 width={1000}
                                 height={1000}
@@ -38,7 +39,7 @@ export default function ImagesSection({ pkg }: Props) {
                         )}
                         {pkg.images[4].url && (
                             <Image
-                                src={pkg.images[4].url}
+                                src={SERVER_URL + pkg.images[4].url}
                                 alt={"pkg-image-4"}
                                 width={1000}
                                 height={1000}
