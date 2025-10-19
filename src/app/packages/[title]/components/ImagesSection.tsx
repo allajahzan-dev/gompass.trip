@@ -20,7 +20,7 @@ export default function ImagesSection({ pkg }: Props) {
             <div
                 className={cn(
                     images.length > 3 ? "col-span-1 lg:col-span-2" : "col-span-3",
-                    "h-full"
+                    "max-h-[90vh]"
                 )}
             >
                 {images[2]?.url && (
@@ -29,20 +29,20 @@ export default function ImagesSection({ pkg }: Props) {
                         alt="pkg-image-3"
                         width={1000}
                         height={1000}
-                        className="max-h-[90vh] w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
+                        className="h-full w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
                     />
                 )}
             </div>
 
             {images.length >= 4 && (
-                <div className="grid grid-rows-2 gap-5 h-full">
+                <div className="grid grid-rows-2 gap-5 max-h-[90vh]">
                     {images[3]?.url && (
                         <Image
                             src={SERVER_URL + images[3].url}
                             alt="pkg-image-4"
                             width={1000}
                             height={1000}
-                            className="max-h-[90vh] w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
+                            className="h-full w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
                         />
                     )}
                     {images[4]?.url && (
@@ -51,7 +51,7 @@ export default function ImagesSection({ pkg }: Props) {
                             alt="pkg-image-5"
                             width={1000}
                             height={1000}
-                            className="max-h-[90vh] w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
+                            className="h-full w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
                         />
                     )}
                 </div>
