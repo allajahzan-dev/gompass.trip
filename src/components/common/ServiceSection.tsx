@@ -16,11 +16,11 @@ export default async function ServiceSection() {
             case "User":
                 return <User className="w-5 h-5 text-black" />;
             case "Leaf":
-                return <Leaf className="w-5 h-5 text-white" />;
+                return <Leaf className="w-5 h-5 text-black" />;
             case "Plane":
                 return <Plane className="w-5 h-5 text-black" />;
             case "Star":
-                return <Star className="w-5 h-5 text-white" />;
+                return <Star className="w-5 h-5 text-black" />;
             default:
                 return null;
         }
@@ -70,7 +70,7 @@ export default async function ServiceSection() {
                             <div
                                 className={cn(
                                     "w-full p-6 flex items-center border border-black rounded-2xl",
-                                    srv.id % 2 === 0 && "bg-[#141414]",
+                                    // srv.id % 2 === 0 && "bg-[#141414]",
                                     "xl:px-12"
                                 )}
                             >
@@ -78,10 +78,10 @@ export default async function ServiceSection() {
                                     {/* Icon */}
                                     <div
                                         className={cn(
-                                            "p-4 border rounded-full",
-                                            srv.id % 2 === 0
-                                                ? "border-[#4f4f4f] bg-[#4f4f4f]"
-                                                : "border-black"
+                                            "p-4 border border-black rounded-full",
+                                            // srv.id % 2 === 0
+                                            //     ? "border-[#4f4f4f] bg-[#4f4f4f]"
+                                            //     : "border-black"
                                         )}
                                     >
                                         {getIcon(srv.icon)}
@@ -92,8 +92,8 @@ export default async function ServiceSection() {
                                         {/* Title */}
                                         <h1
                                             className={cn(
-                                                "font-semibold",
-                                                srv.id % 2 === 0 ? "text-white" : "text-black"
+                                                "font-semibold text-black",
+                                                // srv.id % 2 === 0 ? "text-white" : "text-black"
                                             )}
                                         >
                                             {srv.title}
@@ -102,7 +102,8 @@ export default async function ServiceSection() {
                                         {/* Description */}
                                         <p
                                             className={cn(
-                                                srv.id % 2 === 0 ? "text-zinc-300" : "text-zinc-600"
+                                                "text-zinc-600",
+                                                // srv.id % 2 === 0 ? "text-zinc-300" : "text-zinc-600"
                                             )}
                                         >
                                             {srv.description}
