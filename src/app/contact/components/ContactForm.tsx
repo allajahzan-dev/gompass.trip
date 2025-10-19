@@ -18,7 +18,7 @@ export default function ContactForm() {
         const recipient = "info@gompass.com";
         const subject = encodeURIComponent(sub);
         const body = encodeURIComponent(
-            `Dear Gompass,\n\n${message}\n\nFrom,\n${name})`
+         `Dear Gompass,\n\n${message}\n\nBest Regards,\n${name}`
         );
 
         const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
