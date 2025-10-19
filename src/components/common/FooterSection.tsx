@@ -99,7 +99,7 @@ export default async function FooterSection() {
 
                 {/* Socials */}
                 <div
-                    className="py-5 flex flex-col justify-between gap-5
+                    className="py-5 pb-2 flex flex-col justify-between gap-5
                     lg:flex-row"
                 >
                     <div className="flex items-center gap-5 text-white">

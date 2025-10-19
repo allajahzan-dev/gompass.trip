@@ -128,8 +128,19 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  user-select: none;
+  /* user-select: none; */
+  user-select: orange;
   -webkit-user-drag: none;
+}
+
+::selection {
+  background-color: #f15b34;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #f15b34;
+  color: #ffffff;
 }
 
 body {
