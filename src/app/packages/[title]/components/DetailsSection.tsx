@@ -80,18 +80,23 @@ export default function DetailsSection({ pkg }: Props) {
                             <AccordionItem
                                 key={index}
                                 value={`item-${index}`}
-                                className="bg-[#f2f1f3] px-10 py-2 flex flex-col gap-5 border-none rounded-lg
+                                className="bg-[#f2f1f3] px-8 py-2 flex flex-col gap-5 border-none rounded-lg
                                 md:flex-row "
                             >
                                 <AccordionTrigger className="text-xl cursor-pointer">
-                                    <div className="flex flex-col items-center gap-5
-                                         md:flex-row">
+                                    <div
+                                        className="flex flex-col gap-3
+                                         md:flex-row md:items-center"
+                                    >
                                         <p className="font-bold">{plan.day.toUpperCase()}</p>
                                         <p>{plan.title}</p>
                                     </div>
                                 </AccordionTrigger>
                                 <AccordionContent>
-                                    <div className="flex flex-col relative left-38">
+                                    <div
+                                        className="flex flex-col relative left-0
+                                         md:left-38"
+                                    >
                                         {plan.activities.map((act, index) => (
                                             <span key={index} className="flex items-center">
                                                 <Dot className="w-5 h-5" />
