@@ -4,8 +4,8 @@ import Navbar from "./components/navbar/Navbar";
 import "./globals.css"
 
 export const metadata: Metadata = {
-    title: "Gompass.trip",
-    description: "Travel Agency",
+    title: "Gompass Travel Experts",
+    description: "Gompass Travel Experts offers curated travel packages to top destinations. Explore adventure trips, holiday tours, and affordable vacation packages designed for unforgettable experiences.",
 };
 
 // Root layout
