@@ -48,7 +48,7 @@ export default function DetailsSection({ pkg }: Props) {
                         <div className="flex flex-col gap-2">
                             {pkg.includes.map((inlcude, index) => (
                                 <span key={index} className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-8 h-8 fill-black text-white shrink-0" />
+                                    <CheckCircle2 className="w-8 h-8 fill-black text-white self-start shrink-0" />
                                     <p className="text-xl">{inlcude.value}</p>
                                 </span>
                             ))}
@@ -60,7 +60,7 @@ export default function DetailsSection({ pkg }: Props) {
                         <div className="flex flex-col gap-2">
                             {pkg.excludes.map((exclude, index) => (
                                 <span key={index} className="flex items-center gap-2">
-                                    <CircleX className="w-8 h-8 fill-black text-white shrink-0" />
+                                    <CircleX className="w-8 h-8 fill-black text-white self-start shrink-0" />
                                     <p className="text-xl">{exclude.value}</p>
                                 </span>
                             ))}
@@ -75,7 +75,7 @@ export default function DetailsSection({ pkg }: Props) {
                 <div className="flex flex-col gap-10">
                     <h1 className="text-4xl text-black font-bold">Travel Plans:</h1>
 
-                    <Accordion type="single" collapsible className="text-black space-y-5 py-2">
+                    <Accordion type="single" collapsible className="text-black space-y-5">
                         {pkg.plans.map((plan, index) => (
                             <AccordionItem
                                 key={index}
@@ -86,7 +86,7 @@ export default function DetailsSection({ pkg }: Props) {
                                 <AccordionTrigger className="text-xl cursor-pointer">
                                     <div
                                         className="flex flex-col gap-3
-                                         md:flex-row md:items-center"
+                                        md:flex-row md:items-center"
                                     >
                                         <p className="font-bold">{plan.day.toUpperCase()}</p>
                                         <p>{plan.title}</p>
@@ -95,7 +95,7 @@ export default function DetailsSection({ pkg }: Props) {
                                 <AccordionContent>
                                     <div
                                         className="flex flex-col relative left-0
-                                         md:left-38"
+                                        md:left-38"
                                     >
                                         {plan.activities.map((act, index) => (
                                             <span key={index} className="flex items-center">
