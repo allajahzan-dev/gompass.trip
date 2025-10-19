@@ -84,7 +84,8 @@ export default function DetailsSection({ pkg }: Props) {
                                 md:flex-row "
                             >
                                 <AccordionTrigger className="text-xl cursor-pointer">
-                                    <div className="flex items-center gap-24">
+                                    <div className="flex flex-col items-center gap-5
+                                         md:flex-row">
                                         <p className="font-bold">{plan.day.toUpperCase()}</p>
                                         <p>{plan.title}</p>
                                     </div>
