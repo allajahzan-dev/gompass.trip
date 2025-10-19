@@ -14,7 +14,7 @@ export default function ImagesSection({ pkg }: Props) {
 
     return (
         <section
-            className="h-[calc(100vh-20vh)] px-5 pb-16 bg-white grid grid-cols-1 gap-5
+            className="h-auto px-5 pb-16 bg-white grid grid-cols-1 gap-5
             md:px-10 xl:px-24 md:pb-24 lg:grid-cols-3"
         >
             <div
@@ -29,7 +29,7 @@ export default function ImagesSection({ pkg }: Props) {
                         alt="pkg-image-3"
                         width={1000}
                         height={1000}
-                        className="h-full w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
+                        className="max-h-[80vh] w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
                     />
                 )}
             </div>
@@ -42,7 +42,7 @@ export default function ImagesSection({ pkg }: Props) {
                             alt="pkg-image-4"
                             width={1000}
                             height={1000}
-                            className="h-full w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
+                            className="max-h-[80vh] w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
                         />
                     )}
                     {images[4]?.url && (
@@ -51,7 +51,7 @@ export default function ImagesSection({ pkg }: Props) {
                             alt="pkg-image-5"
                             width={1000}
                             height={1000}
-                            className="h-full w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
+                            className="max-h-[80vh] w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border"
                         />
                     )}
                 </div>
