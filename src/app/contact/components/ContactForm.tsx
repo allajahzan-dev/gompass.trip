@@ -36,6 +36,7 @@ export default function ContactForm() {
                     className="bg-[#f3f3f3] p-6 border-none"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    type="text"
                     required
                 />
                 <Input
@@ -43,7 +44,7 @@ export default function ContactForm() {
                     className="bg-[#f3f3f3] p-6 border-none"
                     value={sub}
                     onChange={(e) => setSub(e.target.value)}
-                    type="email"
+                    type="text"
                     required
                 />
             </div>
