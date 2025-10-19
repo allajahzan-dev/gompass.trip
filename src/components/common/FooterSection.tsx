@@ -1,13 +1,12 @@
-import {
-    Copyright,
-    Instagram,
-    MapPin,
-    Phone,
-} from "lucide-react";
+import { fetchContacts } from "@/app/utils/fetchContacts";
+import { Copyright, Instagram, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 // Footer section
-export default function FooterSection() {
+export default async function FooterSection() {
+    // Contacts
+    const { contact } = await fetchContacts();
+
     return (
         <footer
             className="h-auto px-5 py-16 pb-5 bg-[#141414] flex flex-col gap-16
@@ -18,7 +17,7 @@ export default function FooterSection() {
                 className="w-full grid grid-cols-1 gap-10
                 lg:grid-cols-4 xl:grid-cols-6"
             >
-                {/* `1 */}
+                {/* 1 */}
                 <div className="space-y-3">
                     <h1 className="text-white font-semibold text-lg">Discover</h1>
                     <ul className="flex flex-col gap-2 text-[#c4c4c4] text-base [&>a]:hover:underline [&>a]:cursor-pointer">
@@ -73,14 +72,14 @@ export default function FooterSection() {
                         <h1 className="text-white font-semibold text-xl">Contacts</h1>
                         <ul className="flex flex-col gap-4 text-[#c4c4c4] text-base [&>a]:hover:underline [&>a]:cursor-pointer">
                             <a href={"tel:1234567890"} className="flex items-center gap-4">
-                                <Phone className="w-5 h-5 text-white" />
-                                +123 456 7890
+                                <Phone className="w-5 h-5 text-white shrink-0" />
+                                +91 {contact?.phone || "8157905882"}
                             </a>
                             <li className="flex items-center gap-4">
-                                <MapPin className="w-5 h-5 text-white self-start" />
-                                123 Wanderer Street, City Name,
-                                <br className="hidden md:block" />
-                                State Name, Nation
+                                <MapPin className="w-5 h-5 text-white shrink-0 self-start" />
+                                {contact?.address ||
+                                    "5th mile, Mananthavady, Kellur, Kerala 670645"}
+                                {/* <br className="hidden md:block" /> */}
                             </li>
                         </ul>
                     </div>

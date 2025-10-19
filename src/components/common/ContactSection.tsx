@@ -3,7 +3,7 @@ import RevealSectionTitle from "@/components/animation/RevealSectionTitle";
 import { cn } from "@/lib/utils";
 
 // Contact section
-export default function ContactSection() {
+export default async function ContactSection() {
     return (
         <section
             className="relative h-auto px-5 py-16 bg-white flex flex-col

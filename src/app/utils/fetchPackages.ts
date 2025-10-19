@@ -6,16 +6,12 @@ export interface IPackage {
     title: string;
     location: string;
     days: string;
-    // images: string[];
     images: { url: string; alternativeText?: string }[];
     description1: string;
     description2: string;
     price: string;
-    // includes: string [];
-    // excludes: string [];
     includes: { value: string }[];
     excludes: { value: string }[];
-    // plans: { day: string; title: string; activities: string [] } [];
     plans: { day: string; title: string; activities: { activity: string }[] }[];
 }
 
@@ -23,15 +19,6 @@ export interface IPackage {
 export const fetchPackages = async (): Promise<{
     packages: IPackage[];
 }> => {
-    // try {
-    //     const resp = await fetch(`${BASE_URL}/data/packages.json`);
-    //     const data = await resp.json();
-    //     return data;
-    // } catch (err) {
-    //     console.error("Failed to read packages:", err);
-    //     return { packages: [] };
-    // }
-
     const query = `
     query {
       packages {

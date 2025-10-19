@@ -1,10 +1,14 @@
+import { fetchContacts } from "@/app/utils/fetchContacts";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Map, Phone } from "lucide-react";
 
 // Contact form section
-export default function ContactFormSection() {
+export default async function ContactFormSection() {
+    // Contacts
+    const { contact } = await fetchContacts();
+
     return (
         <section
             className="h-auto px-5 py-16 flex flex-col gap-16
@@ -47,7 +51,7 @@ export default function ContactFormSection() {
                         </div>
                         <div className="space-y-2 ">
                             <p className="font-semibold">Phone Number</p>
-                            <p>+1 234 567 890</p>
+                            <p>+91 {contact?.phone || "8157905882"}</p>
                         </div>
                     </div>
 
@@ -69,7 +73,10 @@ export default function ContactFormSection() {
                         </div>
                         <div className="space-y-2 ">
                             <p className="font-semibold">Address</p>
-                            <p>123 Wanderer Street, City Name, State Name, Nation</p>
+                            <p>
+                                {contact?.address ||
+                                    "5th mile, Mananthavady, Kellur, Kerala 670645"}
+                            </p>
                         </div>
                     </div>
                 </div>

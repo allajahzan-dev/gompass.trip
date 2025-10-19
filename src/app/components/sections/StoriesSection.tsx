@@ -60,19 +60,23 @@ export default async function StoriesSection() {
                                 key={str.documentId}
                                 className="md:basis-1/2 lg:basis-1/3 p-8 flex flex-col gap-6 justify-between border border-black rounded-3xl"
                             >
-                                <p className="text-xl text-zinc-600">{str.description}</p>
+                                <p className="text-xl text-zinc-600">{str.review}</p>
                                 <div className="flex items-center gap-5">
                                     <div>
                                         <Image
                                             width={64}
                                             height={64}
-                                            src={SERVER_URL + str.image?.url}
+                                            src={
+                                                str.userImage?.url
+                                                    ? SERVER_URL + str.userImage.url
+                                                    : "/svgs/user.svg"
+                                            }
                                             alt="avatar"
                                             className="w-12 h-12 rounded-full"
                                         />
                                     </div>
                                     <div className="text-base">
-                                        <h3 className="font-bold">{str.name}</h3>
+                                        <h3 className="font-bold">{str.userName}</h3>
                                         <p>{str.location}</p>
                                     </div>
                                 </div>
