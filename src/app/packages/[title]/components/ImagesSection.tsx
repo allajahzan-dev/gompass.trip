@@ -1,5 +1,6 @@
 import { IPackage } from "@/app/utils/fetchPackages";
 import { SERVER_URL } from "@/constants/url";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 interface Props {
@@ -13,10 +14,10 @@ export default function ImagesSection({ pkg }: Props) {
 
     return (
         <section
-            className="min-h-screen px-5 py-16 bg-white grid grid-cols-1 gap-5
-            md:px-10 xl:px-24 md:py-24 lg:grid-cols-3"
+            className="min-h-screen px-5 pb-16 bg-white grid grid-cols-1 gap-5
+            md:px-10 xl:px-24 md:pb-24 lg:grid-cols-3"
         >
-            <div className="col-span-1 lg:col-span-2">
+            <div className={cn(images.length > 3 && "col-span-1 lg:col-span-2")}>
                 {images[2]?.url && (
                     <Image
                         src={SERVER_URL + images[2].url}
