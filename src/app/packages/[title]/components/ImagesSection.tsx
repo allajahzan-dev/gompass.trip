@@ -28,7 +28,7 @@ export default function ImagesSection({ pkg }: Props) {
                         alt="pkg-image-3"
                         width={1000}
                         height={1000}
-                        className="h-full w-full object-cover object-center rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border cursor-pointer"
+                        className="h-full w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border cursor-pointer"
                     />
                 )}
             </div>
@@ -41,7 +41,7 @@ export default function ImagesSection({ pkg }: Props) {
                             alt="pkg-image-4"
                             width={1000}
                             height={1000}
-                            className="h-full w-full object-cover object-center rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border cursor-pointer"
+                            className="h-full w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border cursor-pointer"
                         />
                     )}
                     {images[4]?.url && (
@@ -50,7 +50,7 @@ export default function ImagesSection({ pkg }: Props) {
                             alt="pkg-image-5"
                             width={1000}
                             height={1000}
-                            className="h-full w-full object-cover object-center rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border cursor-pointer"
+                            className="h-full w-full object-cover object-center rounded-2xl hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] border cursor-pointer"
                         />
                     )}
                 </div>

@@ -22,14 +22,14 @@ export default function AboutSection() {
                         loop
                         muted
                         src="/images/about/about-video.mp4"
-                        className="h-56 w-full object-cover rounded-3xl"
+                        className="h-56 w-full object-cover rounded-2xl"
                     />
                     <Image
                         width={1000}
                         height={1000}
                         alt="about-image"
                         src="/images/about/about-image.jpg"
-                        className="rounded-3xl"
+                        className="rounded-2xl"
                     />
                 </div>
 

@@ -58,7 +58,7 @@ export default async function StoriesSection() {
                         {stories.map((str) => (
                             <CarouselItem
                                 key={str.documentId}
-                                className="md:basis-1/2 lg:basis-1/3 p-8 flex flex-col gap-6 justify-between border border-black rounded-3xl"
+                                className="md:basis-1/2 lg:basis-1/3 p-8 flex flex-col gap-6 justify-between border border-black rounded-2xl"
                             >
                                 <p className="text-xl text-zinc-600">{str.review}</p>
                                 <div className="flex items-center gap-5">

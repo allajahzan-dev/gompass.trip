@@ -69,7 +69,7 @@ export default async function ServiceSection() {
                         <AnimateServices key={srv.id} id={srv.id}>
                             <div
                                 className={cn(
-                                    "w-full p-6 flex items-center border border-black rounded-3xl",
+                                    "w-full p-6 flex items-center border border-black rounded-2xl",
                                     srv.id % 2 === 0 && "bg-[#141414]",
                                     "xl:px-12"
                                 )}
