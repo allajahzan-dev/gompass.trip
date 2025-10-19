@@ -65,7 +65,7 @@ export default function TitleSection({ pkg }: Props) {
                         height={1000}
                         src="/svgs/no-image.svg"
                         alt={pkg.title}
-                        className="w-80"
+                        className="w-72"
                     />
                 </div>
             )}

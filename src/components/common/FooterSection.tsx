@@ -22,7 +22,7 @@ export default async function FooterSection() {
                     <h1 className="text-white font-semibold text-lg">Discover</h1>
                     <ul className="flex flex-col gap-2 text-[#c4c4c4] text-base [&>a]:hover:underline [&>a]:cursor-pointer">
                         <Link href={"/"}>Home</Link>
-                        <Link href={"/about"}>About Us</Link>
+                        <Link href={"/about"}>About</Link>
                         <Link href={"/packages"}>Trip Packages</Link>
                         <Link href={"/gallery"}>Gallery</Link>
                         <Link href={"/contact"}>Contact</Link>

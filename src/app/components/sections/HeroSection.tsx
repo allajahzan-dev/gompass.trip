@@ -1,3 +1,4 @@
+import Link from "next/link";
 import RevealHeroTitle from "../animations/RevealHeroTitle";
 
 // Here section
@@ -38,12 +39,13 @@ export default function HeroSection() {
                 </p>
 
                 {/* Explore button */}
-                <button
+                <Link
+                    href="/packages"
                     className="font-semibold px-8 py-2 hover:bg-white hover:text-black transition-colors duration-300
                     border border-white rounded-full cursor-pointer"
                 >
                     Explore Now&nbsp;&nbsp;&nbsp;→
-                </button>
+                </Link>
             </div>
         </section>
     );

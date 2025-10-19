@@ -48,8 +48,7 @@ export default function DetailsSection({ pkg }: Props) {
                         <div className="flex flex-col gap-2">
                             {pkg.includes.map((inlcude, index) => (
                                 <span key={index} className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-8 h-8 fill-black text-white" />
-                                    {/* <p className="text-xl">{inlcude}</p> */}
+                                    <CheckCircle2 className="w-8 h-8 fill-black text-white shrink-0" />
                                     <p className="text-xl">{inlcude.value}</p>
                                 </span>
                             ))}
@@ -61,8 +60,7 @@ export default function DetailsSection({ pkg }: Props) {
                         <div className="flex flex-col gap-2">
                             {pkg.excludes.map((exclude, index) => (
                                 <span key={index} className="flex items-center gap-2">
-                                    <CircleX className="w-8 h-8 fill-black text-white" />
-                                    {/* <p className="text-xl">{exclude}</p> */}
+                                    <CircleX className="w-8 h-8 fill-black text-white shrink-0" />
                                     <p className="text-xl">{exclude.value}</p>
                                 </span>
                             ))}
@@ -82,7 +80,8 @@ export default function DetailsSection({ pkg }: Props) {
                             <AccordionItem
                                 key={index}
                                 value={`item-${index}`}
-                                className="bg-[#f2f1f3] px-10 py-2 border-none rounded-lg"
+                                className="bg-[#f2f1f3] px-10 py-2 flex flex-col gap-5 border-none rounded-lg
+                                md:flex-row"
                             >
                                 <AccordionTrigger className="text-xl cursor-pointer">
                                     <div className="flex items-center gap-24">
@@ -95,7 +94,6 @@ export default function DetailsSection({ pkg }: Props) {
                                         {plan.activities.map((act, index) => (
                                             <span key={index} className="flex items-center">
                                                 <Dot className="w-5 h-5" />
-                                                {/* <p className="text-base">{act}</p> */}
                                                 <p className="text-base">{act.activity}</p>
                                             </span>
                                         ))}
