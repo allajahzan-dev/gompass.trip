@@ -2,8 +2,8 @@ import { playfair } from "@/app/fonts/playfair";
 import RevealSectionTitle from "@/components/animation/RevealSectionTitle";
 import { cn } from "@/lib/utils";
 
-// Contact section
-export default async function ContactSection() {
+// Connect section
+export default async function ConnectSection() {
     return (
         <section
             className="relative h-auto px-5 py-16 bg-white flex flex-col

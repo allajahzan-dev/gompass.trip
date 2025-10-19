@@ -1,7 +1,7 @@
 import TitleSection from "@/components/common/TitleSection";
 import AboutSection from "./AboutSection";
 import ServiceSection from "@/components/common/ServiceSection";
-import ContactSection from "@/components/common/ContactSection";
+import ConnectSection from "@/components/common/ConnectSection";
 import FooterSection from "@/components/common/FooterSection";
 
 // Main section
@@ -14,7 +14,7 @@ export default function MainSection() {
             />
             <AboutSection />
             <ServiceSection />
-            <ContactSection />
+            <ConnectSection />
             <FooterSection />
         </main>
     );

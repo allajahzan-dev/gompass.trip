@@ -1,6 +1,6 @@
 import TitleSection from "@/components/common/TitleSection";
 import PackageSection from "./PackageSection";
-import ContactSection from "@/components/common/ContactSection";
+import ConnectSection from "@/components/common/ConnectSection";
 import FooterSection from "@/components/common/FooterSection";
 
 // Main section
@@ -12,7 +12,7 @@ export default function MainSection() {
                 text={["Tour", "Packages"]}
             />
             <PackageSection />
-            <ContactSection />
+            <ConnectSection />
             <FooterSection />
         </main>
     );

@@ -2,6 +2,7 @@ import { fetchPackages } from "@/app/utils/fetchPackages";
 import FooterSection from "@/components/common/FooterSection";
 import TitleSection from "./TitleSection";
 import DetailsSection from "./DetailsSection";
+import ImagesSection from "./ImagesSection";
 
 // Interface for Props
 interface Props {
@@ -22,6 +23,7 @@ export default async function MainSection({ title }: Props) {
                 <>
                     <TitleSection pkg={pkg} />
                     <DetailsSection pkg={pkg} />
+                    <ImagesSection pkg={pkg} />
                 </>
             ) : (
                 <div className="h-screen flex items-center justify-center">
