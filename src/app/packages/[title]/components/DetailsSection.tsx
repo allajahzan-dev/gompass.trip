@@ -81,7 +81,7 @@ export default function DetailsSection({ pkg }: Props) {
                                 key={index}
                                 value={`item-${index}`}
                                 className="bg-[#f2f1f3] px-10 py-2 flex flex-col gap-5 border-none rounded-lg
-                                md:flex-row"
+                                md:flex-row "
                             >
                                 <AccordionTrigger className="text-xl cursor-pointer">
                                     <div className="flex items-center gap-24">
