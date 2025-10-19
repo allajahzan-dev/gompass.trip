@@ -22,19 +22,18 @@ export default async function ContactFormSection() {
                 {/* Details */}
                 <div className="flex flex-col gap-5">
                     {/* Phone number */}
-                    <div className="flex items-center gap-5 p-5 border border-black rounded-2xl">
+                    <a
+                        href={`tel:+91${contact?.phone || "8157905882"}`}
+                        className="flex items-center gap-5 p-5 border border-black rounded-2xl"
+                    >
                         <div className="p-4 border border-black rounded-full">
                             <Phone className="w-5 h-5" />
                         </div>
                         <div className="space-y-2 ">
                             <p className="font-semibold">Phone Number</p>
-                            <p>
-                                <a href={`tel:+91${contact?.phone || "8157905882"}`}>
-                                    +91 {contact?.phone || "8157905882"}
-                                </a>
-                            </p>
+                            <p>+91 {contact?.phone || "8157905882"}</p>
                         </div>
-                    </div>
+                    </a>
 
                     {/* Email */}
                     <div className="flex items-center gap-5 p-5 border border-black rounded-2xl">
