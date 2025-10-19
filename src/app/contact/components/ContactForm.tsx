@@ -8,7 +8,7 @@ import React, { useState } from "react";
 // Contact form
 export default function ContactForm() {
     const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
+    const [sub, setSub] = useState("");
     const [message, setMessage] = useState("");
 
     // Handle submit
@@ -16,12 +16,11 @@ export default function ContactForm() {
         e.preventDefault();
 
         const recipient = "info@gompass.com";
-        const subject = encodeURIComponent(`Packages enquiry - ${name}`);
+        const subject = encodeURIComponent(sub);
         const body = encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            `Dear Gompass,\n\n${message}\n\nFrom,\n${name})`
         );
 
-        // Open Gmail in new tab with prefilled mail
         const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
         window.open(gmailUrl, "_blank");
     };
@@ -40,10 +39,10 @@ export default function ContactForm() {
                     required
                 />
                 <Input
-                    placeholder="Email"
+                    placeholder="Subject"
                     className="bg-[#f3f3f3] p-6 border-none"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={sub}
+                    onChange={(e) => setSub(e.target.value)}
                     type="email"
                     required
                 />
