@@ -28,26 +28,28 @@ export default function ImagesSection({ pkg }: Props) {
                 )}
             </div>
 
-            <div className="grid grid-rows-2 gap-5">
-                {images[3]?.url && (
-                    <Image
-                        src={SERVER_URL + images[3].url}
-                        alt="pkg-image-4"
-                        width={1000}
-                        height={1000}
-                        className="h-full w-full object-cover object-center"
-                    />
-                )}
-                {images[4]?.url && (
-                    <Image
-                        src={SERVER_URL + images[4].url}
-                        alt="pkg-image-5"
-                        width={1000}
-                        height={1000}
-                        className="h-full w-full object-cover object-center"
-                    />
-                )}
-            </div>
+            {images.length >= 4 && (
+                <div className="grid grid-rows-2 gap-5">
+                    {images[3]?.url && (
+                        <Image
+                            src={SERVER_URL + images[3].url}
+                            alt="pkg-image-4"
+                            width={1000}
+                            height={1000}
+                            className="h-full w-full object-cover object-center"
+                        />
+                    )}
+                    {images[4]?.url && (
+                        <Image
+                            src={SERVER_URL + images[4].url}
+                            alt="pkg-image-5"
+                            width={1000}
+                            height={1000}
+                            className="h-full w-full object-cover object-center"
+                        />
+                    )}
+                </div>
+            )}
         </section>
     );
 }
