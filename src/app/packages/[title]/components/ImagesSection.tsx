@@ -19,7 +19,8 @@ export default function ImagesSection({ pkg }: Props) {
         >
             <div
                 className={cn(
-                    images.length > 3 ? "col-span-1 lg:col-span-2" : "col-span-3"
+                    images.length > 3 ? "col-span-1 lg:col-span-2" : "col-span-3",
+                    "h-full"
                 )}
             >
                 {images[2]?.url && (
@@ -34,7 +35,7 @@ export default function ImagesSection({ pkg }: Props) {
             </div>
 
             {images.length >= 4 && (
-                <div className="grid grid-rows-2 gap-5">
+                <div className="grid grid-rows-2 gap-5 h-full">
                     {images[3]?.url && (
                         <Image
                             src={SERVER_URL + images[3].url}
