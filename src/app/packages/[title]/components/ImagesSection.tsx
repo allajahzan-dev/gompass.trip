@@ -14,7 +14,7 @@ export default function ImagesSection({ pkg }: Props) {
 
     return (
         <section
-            className="h-[80vh] px-5 pb-16 bg-white grid grid-cols-1 gap-5
+            className="h-[calc(100vh-20vh)] px-5 pb-16 bg-white grid grid-cols-1 gap-5
             md:px-10 xl:px-24 md:pb-24 lg:grid-cols-3"
         >
             <div
