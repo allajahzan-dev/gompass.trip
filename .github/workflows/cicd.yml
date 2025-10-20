@@ -20,13 +20,14 @@ jobs:
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/gompass-trip:frontend .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/gompass-trip:frontend
 
-      # - name: SSH and Update EC2
-      #   uses: appleboy/ssh-action@v1.0.3
-      #   with:
-      #     host: ${{ secrets.EC2_HOST }}
-      #     username: ${{ secrets.EC2_USER }}
-      #     key: ${{ secrets.EC2_KEY }}
-      #     script: |
-      #       cd /home/ubuntu/app
-      #       docker compose pull frontend
-      #       docker compose up -d frontend
+      - name: SSH and Update EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            cd /home/ubuntu/my-app
+            docker-compose pull frontend
+            docker-compose up -d frontend
+
