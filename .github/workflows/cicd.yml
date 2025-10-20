@@ -17,8 +17,8 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/gompass:frontend .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/gompass:frontend
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/gompass-trip:frontend .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/gompass-trip:frontend
 
       # - name: SSH and Update EC2
       #   uses: appleboy/ssh-action@v1.0.3
