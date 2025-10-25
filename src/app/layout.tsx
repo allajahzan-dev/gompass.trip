@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { dmSans } from "../fonts/dmSans";
+import { dmSans } from "./fonts/dmSans";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css"
 import ContactIndicator from "./components/animations/ContactIndicator";
@@ -20,7 +20,7 @@ export default function RootLayout({
             <body>
                 <Navbar />
                 {children}
-                {/* <ContactIndicator/> */}
+                <ContactIndicator/>
             </body>
         </html>
     );

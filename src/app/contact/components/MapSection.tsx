@@ -1,4 +1,4 @@
-import { playfair } from "@/fonts/playfair";
+import { playfair } from "@/app/fonts/playfair";
 import RevealSectionTitle from "@/components/animation/RevealSectionTitle";
 import { cn } from "@/lib/utils";
 

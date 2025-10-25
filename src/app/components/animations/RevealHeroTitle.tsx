@@ -1,6 +1,6 @@
 "use client";
 
-import { playfair } from "@/fonts/playfair";
+import { playfair } from "@/app/fonts/playfair";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 

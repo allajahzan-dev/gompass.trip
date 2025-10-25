@@ -50,12 +50,12 @@ export default function Navbar() {
         switch (pathname.split("/")[1]) {
             case "":
                 return setColor("text-white");
-            // case "packages":
-            //     return setColor("text-black");
-            // case "about":
-            //     return setColor("text-black");
-            // case "contact":
-            //     return setColor("text-black");
+            case "packages":
+                return setColor("text-black");
+            case "about":
+                return setColor("text-black");
+            case "contact":
+                return setColor("text-black");
             default:
                 return setColor("text-white");
         }
