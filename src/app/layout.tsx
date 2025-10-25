@@ -3,6 +3,7 @@ import { dmSans } from "../fonts/dmSans";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css"
 import ContactIndicator from "./components/animations/ContactIndicator";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
     title: "Gompass Travel Experts",
@@ -15,6 +16,7 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    notFound();
     return (
         <html lang="en" className={dmSans.className}>
             <body>
