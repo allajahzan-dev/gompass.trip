@@ -3,7 +3,7 @@ import { fetchPackages } from "@/app/utils/fetchPackages";
 import AnimatePackages from "@/components/animation/AnimatePackages";
 import RevealSectionTitle from "@/components/animation/RevealSectionTitle";
 import { cn } from "@/lib/utils";
-import { playfair } from "@/app/fonts/playfair";
+import { playfair } from "@/fonts/playfair";
 
 // Package section
 export default async function PackageSection() {
